@@ -7,9 +7,9 @@ import MyCarousel from "./detailHome/MyCarousel";
 import MyCategory from "./detailHome/MyCategory";
 import MyService from "./detailHome/MyService";
 
-export default function Home() {
+export default function Home({ navigation }) {
   return (
-    <View style={styles.container}>
+    <View>
       <HeadingHome />
       <ScrollView showsVerticalScrollIndicator={false}>
         <MyCarousel />

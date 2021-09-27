@@ -51,7 +51,6 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     height: height / 6,
     paddingTop: 10,
-    marginBottom: 10,
     marginTop: 15,
   },
   rowFlexAlignJust: {
