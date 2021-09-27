@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { Dimensions } from "react-native";
 
 var width = Dimensions.get("window").width; //full width
@@ -38,11 +38,19 @@ const dataCategory = [
   },
 ];
 
-export default function MyCategory() {
+export default function MyCategory(props) {
+  const navigation = props.title;
   return (
     <View style={styles.container}>
       <View style={{ flexDirection: "row" }}>
-        <View style={styles.test1}>
+        <TouchableOpacity
+          style={styles.test1}
+          onPress={() => {
+            navigation.navigate("HomeStadium", {
+              name: "Football",
+            });
+          }}
+        >
           <Image
             style={{ height: width / 8, width: width / 8, marginBottom: 5 }}
             source={{
@@ -50,8 +58,15 @@ export default function MyCategory() {
             }}
           />
           <Text style={styles.titleCateText}>Football</Text>
-        </View>
-        <View style={styles.test1}>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.test1}
+          onPress={() => {
+            navigation.navigate("HomeStadium", {
+              name: "Tennis",
+            });
+          }}
+        >
           <Image
             style={{ height: width / 8, width: width / 8, marginBottom: 5 }}
             source={{
@@ -59,8 +74,15 @@ export default function MyCategory() {
             }}
           />
           <Text style={styles.titleCateText}>Tennis</Text>
-        </View>
-        <View style={styles.test1}>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.test1}
+          onPress={() => {
+            navigation.navigate("HomeStadium", {
+              name: "Basketball",
+            });
+          }}
+        >
           <Image
             style={{ height: width / 8, width: width / 8, marginBottom: 5 }}
             source={{
@@ -68,8 +90,15 @@ export default function MyCategory() {
             }}
           />
           <Text style={styles.titleCateText}>Basketball</Text>
-        </View>
-        <View style={styles.test1}>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.test1}
+          onPress={() => {
+            navigation.navigate("HomeStadium", {
+              name: "Badminton",
+            });
+          }}
+        >
           <Image
             style={{ height: width / 8, width: width / 8, marginBottom: 5 }}
             source={{
@@ -77,10 +106,17 @@ export default function MyCategory() {
             }}
           />
           <Text style={styles.titleCateText}>Badminton</Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <View style={{ flexDirection: "row" }}>
-        <View style={styles.test1}>
+        <TouchableOpacity
+          style={styles.test1}
+          onPress={() => {
+            navigation.navigate("HomeStadium", {
+              name: "Table Te...",
+            });
+          }}
+        >
           <Image
             style={{ height: width / 8, width: width / 8, marginBottom: 5 }}
             source={{
@@ -88,8 +124,15 @@ export default function MyCategory() {
             }}
           />
           <Text style={styles.titleCateText}>Table Te...</Text>
-        </View>
-        <View style={styles.test1}>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.test1}
+          onPress={() => {
+            navigation.navigate("HomeStadium", {
+              name: "Volleyball",
+            });
+          }}
+        >
           <Image
             style={{ height: width / 8, width: width / 8, marginBottom: 5 }}
             source={{
@@ -97,8 +140,15 @@ export default function MyCategory() {
             }}
           />
           <Text style={styles.titleCateText}>Volleyball</Text>
-        </View>
-        <View style={styles.test1}>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.test1}
+          onPress={() => {
+            navigation.navigate("HomeStadium", {
+              name: "Skating",
+            });
+          }}
+        >
           <Image
             style={{ height: width / 8, width: width / 8, marginBottom: 5 }}
             source={{
@@ -106,8 +156,15 @@ export default function MyCategory() {
             }}
           />
           <Text style={styles.titleCateText}>Skating</Text>
-        </View>
-        <View style={styles.test1}>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.test1}
+          onPress={() => {
+            navigation.navigate("HomeStadium", {
+              name: "Boxing",
+            });
+          }}
+        >
           <Image
             style={{ height: width / 8, width: width / 8, marginBottom: 5 }}
             source={{
@@ -115,7 +172,7 @@ export default function MyCategory() {
             }}
           />
           <Text style={styles.titleCateText}>Boxing</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

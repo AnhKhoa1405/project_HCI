@@ -1,5 +1,11 @@
 import React from "react";
-import { StyleSheet, View, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  View,
+  ScrollView,
+  TouchableOpacity,
+  Text,
+} from "react-native";
 import AnotherSales from "./detailHome/AnotherSales";
 import FooterHome from "./detailHome/FooterHome";
 import HeadingHome from "./detailHome/HeadingHome";
@@ -13,7 +19,7 @@ export default function Home({ navigation }) {
       <HeadingHome />
       <ScrollView showsVerticalScrollIndicator={false}>
         <MyCarousel />
-        <MyCategory />
+        <MyCategory title={navigation} />
         <MyService />
         <AnotherSales />
       </ScrollView>
