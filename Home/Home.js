@@ -17,7 +17,7 @@ export default function Home({ navigation }) {
         <MyService />
         <AnotherSales />
       </ScrollView>
-      <FooterHome />
+      {/* <FooterHome /> */}
     </View>
   );
 }
