@@ -15,7 +15,7 @@ import MyService from "./detailHome/MyService";
 
 export default function Home({ navigation }) {
   return (
-    <View>
+    <View style={styles.container}>
       <HeadingHome />
       <ScrollView showsVerticalScrollIndicator={false}>
         <MyCarousel />
