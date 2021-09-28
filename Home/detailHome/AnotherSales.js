@@ -2,11 +2,20 @@ import React from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
 import { Dimensions } from "react-native";
 import { MaterialCommunityIcons, AntDesign } from "@expo/vector-icons";
+import { useFonts } from "expo-font";
 
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
 
 export default function AnotherSales() {
+  const [loaded] = useFonts({
+    RobotoBlack: require("../../assets/fonts/Roboto-Black.ttf"),
+    RobotoThin: require("../../assets/fonts/Roboto-Thin.ttf"),
+    RototoMedium: require("../../assets/fonts/Roboto-Medium.ttf"),
+  });
+  if (!loaded) {
+    return null;
+  }
   return (
     <View style={styles.container}>
       <Text style={styles.solganText}>Sân yêu thích</Text>
@@ -44,6 +53,7 @@ export default function AnotherSales() {
                 style={{
                   fontSize: 16,
                   width: width / 2,
+                  fontFamily: "RobotoBlack",
                 }}
               >
                 Sân Thăng Quan Tiến Chức
@@ -55,6 +65,7 @@ export default function AnotherSales() {
                 marginTop: 5,
                 width: width / 2,
                 lineHeight: 18,
+                fontFamily: "RototoMedium",
               }}
             >
               Chuyên cung cấp dịch vụ cho thuê các loại sân phổ biến(bóng đá,
@@ -63,7 +74,14 @@ export default function AnotherSales() {
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <AntDesign name="star" size={24} color="#F7B603" />
               <Text style={{ fontSize: 16, marginLeft: 5 }}>4.1</Text>
-              <Text style={{ fontSize: 14, marginLeft: 5, color: "#BCC0C3" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 5,
+                  color: "#BCC0C3",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 (999+)
               </Text>
               <Text
@@ -76,7 +94,14 @@ export default function AnotherSales() {
               >
                 .
               </Text>
-              <Text style={{ fontSize: 14, marginLeft: 8, color: "#969EA6" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 8,
+                  color: "#969EA6",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 0.4 km
               </Text>
             </View>
@@ -118,6 +143,7 @@ export default function AnotherSales() {
                 style={{
                   fontSize: 16,
                   width: width / 2,
+                  fontFamily: "RobotoBlack",
                 }}
               >
                 Sân Lửa Hồng
@@ -129,6 +155,7 @@ export default function AnotherSales() {
                 marginTop: 5,
                 width: width / 2,
                 lineHeight: 18,
+                fontFamily: "RototoMedium",
               }}
             >
               Cung cấp các dịch vụ cho thuê sân chuyên nghiệp đẳng cấp
@@ -136,7 +163,14 @@ export default function AnotherSales() {
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <AntDesign name="star" size={24} color="#F7B603" />
               <Text style={{ fontSize: 16, marginLeft: 5 }}>4.1</Text>
-              <Text style={{ fontSize: 14, marginLeft: 5, color: "#BCC0C3" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 5,
+                  color: "#BCC0C3",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 (999+)
               </Text>
               <Text
@@ -149,7 +183,14 @@ export default function AnotherSales() {
               >
                 .
               </Text>
-              <Text style={{ fontSize: 14, marginLeft: 8, color: "#969EA6" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 8,
+                  color: "#969EA6",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 0.4 km
               </Text>
             </View>
@@ -191,6 +232,7 @@ export default function AnotherSales() {
                 style={{
                   fontSize: 16,
                   width: width / 2,
+                  fontFamily: "RobotoBlack",
                 }}
               >
                 Sân Trượt Ván Nộ Long
@@ -202,13 +244,22 @@ export default function AnotherSales() {
                 marginTop: 5,
                 width: width / 2,
                 lineHeight: 18,
+                fontFamily: "RototoMedium",
               }}
             >
               Chuyên cho thuê sân trượt ván biểu diễn chuyên nghiệp
             </Text>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <AntDesign name="star" size={24} color="#F7B603" />
-              <Text style={{ fontSize: 16, marginLeft: 5 }}>4.1</Text>
+              <Text
+                style={{
+                  fontSize: 16,
+                  marginLeft: 5,
+                  fontFamily: "RobotoBlack",
+                }}
+              >
+                4.1
+              </Text>
               <Text style={{ fontSize: 14, marginLeft: 5, color: "#BCC0C3" }}>
                 (999+)
               </Text>
@@ -218,11 +269,19 @@ export default function AnotherSales() {
                   marginLeft: 8,
                   marginBottom: 5,
                   color: "#969EA6",
+                  fontFamily: "RobotoBlack",
                 }}
               >
                 .
               </Text>
-              <Text style={{ fontSize: 14, marginLeft: 8, color: "#969EA6" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 8,
+                  color: "#969EA6",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 0.4 km
               </Text>
             </View>
@@ -264,6 +323,7 @@ export default function AnotherSales() {
                 style={{
                   fontSize: 16,
                   width: width / 2,
+                  fontFamily: "RobotoBlack",
                 }}
               >
                 Sân Chiến Thế Nhờ
@@ -281,8 +341,22 @@ export default function AnotherSales() {
             </Text>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <AntDesign name="star" size={24} color="#F7B603" />
-              <Text style={{ fontSize: 16, marginLeft: 5 }}>4.1</Text>
-              <Text style={{ fontSize: 14, marginLeft: 5, color: "#BCC0C3" }}>
+              <Text
+                style={{
+                  fontSize: 16,
+                  marginLeft: 5,
+                }}
+              >
+                4.1
+              </Text>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 5,
+                  color: "#BCC0C3",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 (999+)
               </Text>
               <Text
@@ -295,7 +369,14 @@ export default function AnotherSales() {
               >
                 .
               </Text>
-              <Text style={{ fontSize: 14, marginLeft: 8, color: "#969EA6" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 8,
+                  color: "#969EA6",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 0.4 km
               </Text>
             </View>
@@ -337,6 +418,7 @@ export default function AnotherSales() {
                 style={{
                   fontSize: 16,
                   width: width / 2,
+                  fontFamily: "RobotoBlack",
                 }}
               >
                 Sân Hòa Hưng
@@ -348,14 +430,29 @@ export default function AnotherSales() {
                 marginTop: 5,
                 width: width / 2,
                 lineHeight: 18,
+                fontFamily: "RototoMedium",
               }}
             >
               Chúng tôi cung cấp các dịch vụ về bóng chuyền chuyên nghiệp nhất
             </Text>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <AntDesign name="star" size={24} color="#F7B603" />
-              <Text style={{ fontSize: 16, marginLeft: 5 }}>4.1</Text>
-              <Text style={{ fontSize: 14, marginLeft: 5, color: "#BCC0C3" }}>
+              <Text
+                style={{
+                  fontSize: 16,
+                  marginLeft: 5,
+                }}
+              >
+                4.1
+              </Text>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 5,
+                  color: "#BCC0C3",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 (999+)
               </Text>
               <Text
@@ -368,7 +465,14 @@ export default function AnotherSales() {
               >
                 .
               </Text>
-              <Text style={{ fontSize: 14, marginLeft: 8, color: "#969EA6" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 8,
+                  color: "#969EA6",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 0.4 km
               </Text>
             </View>
@@ -410,18 +514,33 @@ export default function AnotherSales() {
                 style={{
                   fontSize: 16,
                   width: width / 2,
+                  fontFamily: "RobotoBlack",
                 }}
               >
                 Sân Hưng Thịnh
               </Text>
             </View>
-            <Text style={{ flex: 1, marginTop: 5, lineHeight: 18 }}>
+            <Text
+              style={{
+                flex: 1,
+                marginTop: 5,
+                lineHeight: 18,
+                fontFamily: "RototoMedium",
+              }}
+            >
               Cho thuê các loại sân về cầu lông
             </Text>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <AntDesign name="star" size={24} color="#F7B603" />
               <Text style={{ fontSize: 16, marginLeft: 5 }}>4.1</Text>
-              <Text style={{ fontSize: 14, marginLeft: 5, color: "#BCC0C3" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 5,
+                  color: "#BCC0C3",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 (999+)
               </Text>
               <Text
@@ -434,7 +553,14 @@ export default function AnotherSales() {
               >
                 .
               </Text>
-              <Text style={{ fontSize: 14, marginLeft: 8, color: "#969EA6" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 8,
+                  color: "#969EA6",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 0.4 km
               </Text>
             </View>
@@ -476,18 +602,26 @@ export default function AnotherSales() {
                 style={{
                   fontSize: 16,
                   width: width / 2,
+                  fontFamily: "RobotoBlack",
                 }}
               >
                 Sân Ngoại Thành
               </Text>
             </View>
-            <Text style={{ flex: 1, marginTop: 5 }}>
+            <Text style={{ flex: 1, marginTop: 5, fontFamily: "RototoMedium" }}>
               Các loại bóng rổ không thể chê
             </Text>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <AntDesign name="star" size={24} color="#F7B603" />
               <Text style={{ fontSize: 16, marginLeft: 5 }}>4.1</Text>
-              <Text style={{ fontSize: 14, marginLeft: 5, color: "#BCC0C3" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 5,
+                  color: "#BCC0C3",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 (999+)
               </Text>
               <Text
@@ -496,11 +630,19 @@ export default function AnotherSales() {
                   marginLeft: 8,
                   marginBottom: 5,
                   color: "#969EA6",
+                  fontFamily: "RobotoBlack",
                 }}
               >
                 .
               </Text>
-              <Text style={{ fontSize: 14, marginLeft: 8, color: "#969EA6" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 8,
+                  color: "#969EA6",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 0.4 km
               </Text>
             </View>
@@ -542,6 +684,7 @@ export default function AnotherSales() {
                 style={{
                   fontSize: 16,
                   width: width / 2,
+                  fontFamily: "RobotoBlack",
                 }}
               >
                 Sân Nội Thành
@@ -560,7 +703,14 @@ export default function AnotherSales() {
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <AntDesign name="star" size={24} color="#F7B603" />
               <Text style={{ fontSize: 16, marginLeft: 5 }}>4.1</Text>
-              <Text style={{ fontSize: 14, marginLeft: 5, color: "#BCC0C3" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 5,
+                  color: "#BCC0C3",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 (999+)
               </Text>
               <Text
@@ -569,11 +719,19 @@ export default function AnotherSales() {
                   marginLeft: 8,
                   marginBottom: 5,
                   color: "#969EA6",
+                  fontFamily: "RobotoBlack",
                 }}
               >
                 .
               </Text>
-              <Text style={{ fontSize: 14, marginLeft: 8, color: "#969EA6" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 8,
+                  color: "#969EA6",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 0.4 km
               </Text>
             </View>
@@ -615,18 +773,33 @@ export default function AnotherSales() {
                 style={{
                   fontSize: 16,
                   width: width / 2,
+                  fontFamily: "RobotoBlack",
                 }}
               >
                 Sân Hàm Rồng
               </Text>
             </View>
-            <Text style={{ flex: 1, marginTop: 5, width: width / 2 }}>
+            <Text
+              style={{
+                flex: 1,
+                marginTop: 5,
+                width: width / 2,
+                fontFamily: "RototoMedium",
+              }}
+            >
               Các lại sân tennis phổ biến
             </Text>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <AntDesign name="star" size={24} color="#F7B603" />
               <Text style={{ fontSize: 16, marginLeft: 5 }}>4.1</Text>
-              <Text style={{ fontSize: 14, marginLeft: 5, color: "#BCC0C3" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 5,
+                  color: "#BCC0C3",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 (999+)
               </Text>
               <Text
@@ -635,11 +808,19 @@ export default function AnotherSales() {
                   marginLeft: 8,
                   marginBottom: 5,
                   color: "#969EA6",
+                  fontFamily: "RobotoBlack",
                 }}
               >
                 .
               </Text>
-              <Text style={{ fontSize: 14, marginLeft: 8, color: "#969EA6" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 8,
+                  color: "#969EA6",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 0.4 km
               </Text>
             </View>
@@ -681,18 +862,33 @@ export default function AnotherSales() {
                 style={{
                   fontSize: 16,
                   width: width / 2,
+                  fontFamily: "RobotoBlack",
                 }}
               >
                 Sân Chảo Lửa
               </Text>
             </View>
-            <Text style={{ flex: 1, marginTop: 5, width: width / 2 }}>
+            <Text
+              style={{
+                flex: 1,
+                marginTop: 5,
+                width: width / 2,
+                fontFamily: "RototoMedium",
+              }}
+            >
               Nhiều loại sân bóng đá da dạng
             </Text>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <AntDesign name="star" size={24} color="#F7B603" />
               <Text style={{ fontSize: 16, marginLeft: 5 }}>4.1</Text>
-              <Text style={{ fontSize: 14, marginLeft: 5, color: "#BCC0C3" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 5,
+                  color: "#BCC0C3",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 (999+)
               </Text>
               <Text
@@ -705,7 +901,14 @@ export default function AnotherSales() {
               >
                 .
               </Text>
-              <Text style={{ fontSize: 14, marginLeft: 8, color: "#969EA6" }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  marginLeft: 8,
+                  color: "#969EA6",
+                  fontFamily: "RobotoBlack",
+                }}
+              >
                 0.4 km
               </Text>
             </View>

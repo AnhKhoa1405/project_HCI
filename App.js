@@ -13,6 +13,7 @@ export default function App() {
     // <View style={styles.container}>
     //   <Home />
     // </View>
+
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen

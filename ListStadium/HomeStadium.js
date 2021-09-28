@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Text, ScrollView } from "react-native";
-import BadmintonList from "./detailListStadium/BadmintonList";
-import BasketBallList from "./detailListStadium/BasketballList";
-import BoxingList from "./detailListStadium/BoxingList";
+// import BadmintonList from "./detailListStadium/BadmintonList";
+// import BasketBallList from "./detailListStadium/BasketballList";
+// import BoxingList from "./detailListStadium/BoxingList";
 import FootballList from "./detailListStadium/FootballList";
-import SkatingList from "./detailListStadium/SkatingList";
-import TableTennisList from "./detailListStadium/TableTennisList";
-import TennisList from "./detailListStadium/TennisList";
-import VolleyballList from "./detailListStadium/VolleyballList";
+// import SkatingList from "./detailListStadium/SkatingList";
+// import TableTennisList from "./detailListStadium/TableTennisList";
+// import TennisList from "./detailListStadium/TennisList";
+// import VolleyballList from "./detailListStadium/VolleyballList";
 import { Picker } from "@react-native-picker/picker";
 import { Dimensions } from "react-native";
 
@@ -252,14 +252,20 @@ export default function HomeStadium({ navigation, route }) {
   const [filterByStore, setStore] = useState(0);
   const [sale, setSale] = useState(0);
   const [active, setActive] = useState(0);
+
   return (
-    <View style={{ marginTop: 5 }}>
+    <View style={styles.container}>
       <ScrollView
         style={{ height: width / 6 }}
         horizontal
         showsHorizontalScrollIndicator={false}
       >
-        <View style={{ flexDirection: "row", alignItems: "center" }}>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
           <View
             style={{
               width: width / 3.1,
@@ -442,5 +448,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "flex-start",
     justifyContent: "flex-start",
+    marginTop: 5,
   },
 });

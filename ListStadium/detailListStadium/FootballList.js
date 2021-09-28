@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, View, Text, Image, ScrollView } from "react-native";
 import { MaterialCommunityIcons, AntDesign } from "@expo/vector-icons";
 import { Dimensions } from "react-native";
+import { useFonts } from "expo-font";
 
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
@@ -52,18 +53,22 @@ function fillData(myData) {
                   style={{
                     fontSize: 16,
                     width: width / 2,
+                    fontFamily: "RobotoBlack",
                   }}
                 >
                   {element.name}
                 </Text>
               </View>
-              <Text style={{ width: width / 2 }}>{element.address}</Text>
+              <Text style={{ width: width / 2, fontFamily: "RototoMedium" }}>
+                {element.address}
+              </Text>
               <Text
                 style={{
                   flex: 1,
                   marginTop: 5,
                   width: width / 2,
                   lineHeight: 18,
+                  fontFamily: "RototoMedium",
                 }}
               >
                 {element.description}
@@ -73,7 +78,14 @@ function fillData(myData) {
                 <Text style={{ fontSize: 16, marginLeft: 5 }}>
                   {element.rating}
                 </Text>
-                <Text style={{ fontSize: 14, marginLeft: 5, color: "#BCC0C3" }}>
+                <Text
+                  style={{
+                    fontSize: 14,
+                    marginLeft: 5,
+                    color: "#BCC0C3",
+                    fontFamily: "RobotoBlack",
+                  }}
+                >
                   ( {element.peopleParticipation} + )
                 </Text>
                 <Text
@@ -82,11 +94,19 @@ function fillData(myData) {
                     marginLeft: 8,
                     marginBottom: 5,
                     color: "#969EA6",
+                    fontFamily: "RobotoBlack",
                   }}
                 >
                   .
                 </Text>
-                <Text style={{ fontSize: 14, marginLeft: 8, color: "#969EA6" }}>
+                <Text
+                  style={{
+                    fontSize: 14,
+                    marginLeft: 8,
+                    color: "#969EA6",
+                    fontFamily: "RobotoBlack",
+                  }}
+                >
                   {element.distance} km
                 </Text>
               </View>
@@ -99,6 +119,14 @@ function fillData(myData) {
 }
 
 export default function FootballList(props) {
+  const [loaded] = useFonts({
+    RobotoBlack: require("../../assets/fonts/Roboto-Black.ttf"),
+    RobotoThin: require("../../assets/fonts/Roboto-Thin.ttf"),
+    RototoMedium: require("../../assets/fonts/Roboto-Medium.ttf"),
+  });
+  if (!loaded) {
+    return null;
+  }
   return (
     <View style={{ paddingLeft: 16, paddingRight: 16 }}>
       {fillData(props.myData)}
