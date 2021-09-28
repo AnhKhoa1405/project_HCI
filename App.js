@@ -1,10 +1,11 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 import Home from "./Home/Home";
 import "react-native-gesture-handler";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import HomeStadium from "./ListStadium/HomeStadium";
+import SignIn from "./AccountOption/SignIn";
 
 const Stack = createStackNavigator();
 
@@ -13,6 +14,9 @@ export default function App() {
     // <View style={styles.container}>
     //   <Home />
     // </View>
+
+    // ==========================
+
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
