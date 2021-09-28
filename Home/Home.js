@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, ScrollView } from "react-native";
+import { StyleSheet, View, ScrollView, Button } from "react-native";
 import AnotherSales from "./detailHome/AnotherSales";
 import HeadingHome from "./detailHome/HeadingHome";
 import MyCarousel from "./detailHome/MyCarousel";
