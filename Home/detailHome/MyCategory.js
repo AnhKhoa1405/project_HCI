@@ -5,38 +5,38 @@ import { Dimensions } from "react-native";
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
 
-const dataCategory = [
-  {
-    name: "Football",
-    image: "https://cdn-icons-png.flaticon.com/512/123/123495.png",
-  },
-  {
-    name: "Tennis",
-    image: "https://image.flaticon.com/icons/png/512/123/123514.png",
-  },
-  {
-    name: "Basketball",
-    image: "https://cdn-icons-png.flaticon.com/512/1645/1645768.png",
-  },
-  {
-    name: "Badminton",
-    image: "https://image.flaticon.com/icons/png/512/123/123509.png",
-  },
-  {
-    name: "Table Tennis",
-    image:
-      "https://cdn2.iconfinder.com/data/icons/hobby-butterscotch-vol-2/512/Ping_Pong_-_Table_Tennis-512.png",
-  },
-  {
-    name: "Volleyball",
-    image: "https://image.flaticon.com/icons/png/512/184/184093.png",
-  },
-  {
-    name: "Skating",
-    image:
-      "https://static.vecteezy.com/system/resources/previews/002/061/586/non_2x/roller-skates-icon-art-eps-vector.jpg",
-  },
-];
+// const dataCategory = [
+//   {
+//     name: "Football",
+//     image: "https://cdn-icons-png.flaticon.com/512/123/123495.png",
+//   },
+//   {
+//     name: "Tennis",
+//     image: "https://image.flaticon.com/icons/png/512/123/123514.png",
+//   },
+//   {
+//     name: "Basketball",
+//     image: "https://cdn-icons-png.flaticon.com/512/1645/1645768.png",
+//   },
+//   {
+//     name: "Badminton",
+//     image: "https://image.flaticon.com/icons/png/512/123/123509.png",
+//   },
+//   {
+//     name: "Table Tennis",
+//     image:
+//       "https://cdn2.iconfinder.com/data/icons/hobby-butterscotch-vol-2/512/Ping_Pong_-_Table_Tennis-512.png",
+//   },
+//   {
+//     name: "Volleyball",
+//     image: "https://image.flaticon.com/icons/png/512/184/184093.png",
+//   },
+//   {
+//     name: "Skating",
+//     image:
+//       "https://static.vecteezy.com/system/resources/previews/002/061/586/non_2x/roller-skates-icon-art-eps-vector.jpg",
+//   },
+// ];
 
 export default function MyCategory(props) {
   const navigation = props.title;

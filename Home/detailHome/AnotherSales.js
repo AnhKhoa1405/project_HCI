@@ -836,6 +836,7 @@ export default function AnotherSales() {
           borderStyle: "dotted",
           borderColor: "transparent",
           borderBottomColor: "#BCC0C3",
+          marginBottom: width / 6,
         }}
       >
         <View style={{ paddingRight: width / 20, flexDirection: "row" }}>

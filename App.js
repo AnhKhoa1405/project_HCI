@@ -7,26 +7,26 @@ import { NavigationContainer } from "@react-navigation/native";
 import HomeStadium from "./ListStadium/HomeStadium";
 import SignIn from "./AccountOption/SignIn";
 import FooterHome from "./FooterPage/FooterHome";
+import Discount from "./Discount/Discount";
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <FooterHome />
-      {/* <Stack.Navigator> */}
-      {/* <Stack.Screen
+      <Stack.Navigator>
+        <Stack.Screen
           options={{ headerShown: false }}
-          name="SignIn"
-          component={SignIn}
-        ></Stack.Screen> */}
-      {/* <Stack.Screen
-          options={{ headerShown: false }}
-          name="Home"
-          component={Home}
+          name="Footer"
+          component={FooterHome}
         ></Stack.Screen>
-        <Stack.Screen name="HomeStadium" component={HomeStadium}></Stack.Screen> */}
-      {/* </Stack.Navigator> */}
+        <Stack.Screen name="HomeStadium" component={HomeStadium}></Stack.Screen>
+        <Stack.Screen
+          name="Discount"
+          options={{ headerTitle: "Custom title" }}
+          component={Discount}
+        ></Stack.Screen>
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

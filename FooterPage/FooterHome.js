@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../Home/Home";
 import LoveMyPitch from "../LovePitch/LoveMyPitch";
 import BookPitch from "../BookedPitch/BookPitch";
-import HomeStadium from "../ListStadium/HomeStadium";
+import Discount from "../Discount/Discount";
 
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
@@ -48,7 +48,6 @@ export default function FooterHome() {
           right: 0,
           elevation: 0,
           backgroundColor: "#ffffff",
-
           height: width / 6,
           ...styles.shadow,
         },
@@ -89,8 +88,8 @@ export default function FooterHome() {
         }}
       />
       <Tab.Screen
-        name="LoveMyPitch"
-        component={LoveMyPitch}
+        name="BookPitch"
+        component={BookPitch}
         options={{
           tabBarIcon: ({ forcused }) => (
             <View
@@ -123,8 +122,8 @@ export default function FooterHome() {
         }}
       />
       <Tab.Screen
-        name="FootballList"
-        component={Home}
+        name="LoveMyPitch"
+        component={LoveMyPitch}
         options={{
           tabBarIcon: ({ forcused }) => (
             <View
@@ -157,8 +156,8 @@ export default function FooterHome() {
         }}
       />
       <Tab.Screen
-        name="BookPitch"
-        component={BookPitch}
+        name="Discount"
+        component={Discount}
         options={{
           tabBarIcon: ({ forcused }) => (
             <View
@@ -188,10 +187,11 @@ export default function FooterHome() {
               </Text>
             </View>
           ),
+          headerShown: true,
         }}
       />
       <Tab.Screen
-        name="HomeStadium"
+        name="Settings"
         component={Home}
         options={{
           tabBarIcon: ({ forcused }) => (
