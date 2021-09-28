@@ -1,5 +1,4 @@
 import React from "react";
-import { useFonts } from "expo-font";
 import {
   StyleSheet,
   View,
@@ -15,14 +14,6 @@ import MyCategory from "./detailHome/MyCategory";
 import MyService from "./detailHome/MyService";
 
 export default function Home({ navigation }) {
-  const [loaded] = useFonts({
-    RobotoBlack: require("../assets/fonts/Roboto-Black.ttf"),
-    RobotoThin: require("../assets/fonts/Roboto-Light.ttf"),
-    RobotoMedium: require("../assets/fonts/Roboto-Medium.ttf"),
-  });
-  if (!loaded) {
-    return null;
-  }
   return (
     <View>
       <HeadingHome />
@@ -43,6 +34,5 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "flex-start",
     justifyContent: "flex-start",
-    fontFamily: "RobotoBlack",
   },
 });
