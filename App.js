@@ -17,21 +17,16 @@ export default function App() {
 
     // ==========================
 
-    // <NavigationContainer>
-    //   <Stack.Navigator>
-    //     <Stack.Screen
-    //       options={{ headerShown: false }}
-    //       name="Home"
-    //       component={Home}
-    //     ></Stack.Screen>
-    //     <Stack.Screen name="HomeStadium" component={HomeStadium}></Stack.Screen>
-    //   </Stack.Navigator>
-    // </NavigationContainer>
-
-    // ==========================
-    <View style={styles.container}>
-      <SignIn></SignIn>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Home"
+          component={Home}
+        ></Stack.Screen>
+        <Stack.Screen name="HomeStadium" component={HomeStadium}></Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
