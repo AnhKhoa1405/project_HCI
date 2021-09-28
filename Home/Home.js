@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  StyleSheet,
-  View,
-  ScrollView,
-  TouchableOpacity,
-  Text,
-} from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 import AnotherSales from "./detailHome/AnotherSales";
-import FooterHome from "./detailHome/FooterHome";
 import HeadingHome from "./detailHome/HeadingHome";
 import MyCarousel from "./detailHome/MyCarousel";
 import MyCategory from "./detailHome/MyCategory";
@@ -23,7 +16,6 @@ export default function Home({ navigation }) {
         <MyService />
         <AnotherSales />
       </ScrollView>
-      <FooterHome />
     </View>
   );
 }
