@@ -6,31 +6,27 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import HomeStadium from "./ListStadium/HomeStadium";
 import SignIn from "./AccountOption/SignIn";
+import FooterHome from "./FooterPage/FooterHome";
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    // <View style={styles.container}>
-    //   <Home />
-    // </View>
-
-    // ==========================
-
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
+      <FooterHome />
+      {/* <Stack.Navigator> */}
+      {/* <Stack.Screen
           options={{ headerShown: false }}
           name="SignIn"
           component={SignIn}
-        ></Stack.Screen>
-        <Stack.Screen
+        ></Stack.Screen> */}
+      {/* <Stack.Screen
           options={{ headerShown: false }}
           name="Home"
           component={Home}
         ></Stack.Screen>
-        <Stack.Screen name="HomeStadium" component={HomeStadium}></Stack.Screen>
-      </Stack.Navigator>
+        <Stack.Screen name="HomeStadium" component={HomeStadium}></Stack.Screen> */}
+      {/* </Stack.Navigator> */}
     </NavigationContainer>
   );
 }
