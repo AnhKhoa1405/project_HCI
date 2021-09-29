@@ -63,7 +63,7 @@ export default function Signin({ navigation }) {
         <TouchableOpacity
           style={styles.btn}
           onPress={() => {
-            navigation.navigate("Home");
+            navigation.navigate("Footer");
           }}
         >
           <Text style={styles.textAnother}>

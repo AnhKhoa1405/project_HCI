@@ -94,7 +94,7 @@ const dataDiscount = [
 function renderData() {
   return dataDiscount.map((element) => {
     return (
-      <View key={element.code}>
+      <View key={element.code} style={{ backgroundColor: "#eff3f6" }}>
         <View
           style={{
             flexDirection: "row",
@@ -170,6 +170,8 @@ function renderData() {
           <View
             style={{
               flex: 1,
+              borderTopLeftRadius: 5,
+              borderBottomLeftRadius: 5,
             }}
           >
             <Text
@@ -215,18 +217,26 @@ export default function Discount() {
         translucent={true}
       />
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Text
+        <View
           style={{
-            fontSize: 24,
-            textAlign: "center",
-            width: width,
-            marginTop: 10,
-            fontFamily: "RobotoBlack",
-            color: "#3AC5C9",
+            paddingTop: 10,
+            paddingBottom: 10,
+            backgroundColor: "white",
           }}
         >
-          Deal hot khuyến mãi
-        </Text>
+          <Text
+            style={{
+              fontSize: 24,
+              textAlign: "center",
+              width: width,
+              marginTop: 10,
+              fontFamily: "RobotoMedium",
+              color: "#3AC5C9",
+            }}
+          >
+            Deal hot khuyến mãi
+          </Text>
+        </View>
         {renderData()}
       </ScrollView>
     </View>
@@ -236,10 +246,9 @@ export default function Discount() {
 const styles = StyleSheet.create({
   container: {
     flex: 2,
-    backgroundColor: "#fff",
+    backgroundColor: "white",
     alignItems: "flex-start",
     justifyContent: "flex-start",
-    backgroundColor: "#ACAFB3",
     paddingTop: width / 15,
   },
 });
