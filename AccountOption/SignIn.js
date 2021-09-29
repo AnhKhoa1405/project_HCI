@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 import { Dimensions } from "react-native";
 import { useFonts } from "expo-font";
-import { TextInput } from "react-native-gesture-handler";
+import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
@@ -36,10 +36,11 @@ export default function MyService() {
             <Text style={styles.firstNum}>+84</Text>
             <View style={styles.afterFirstNum}></View>
           </View>
-          <TextInput
-            style={styles.textInput}
-            placeholder="Số điện thoại"
-          ></TextInput>
+          <TouchableOpacity>
+            <View style={styles.textInput}>
+              <Text style={styles.buttonText}>Số điện thoại</Text>
+            </View>
+          </TouchableOpacity>
           <View style={styles.anotherOption}>
             <View style={styles.line} />
             <Text style={styles.anotherTitle}>Hoặc đăng nhập bằng</Text>
@@ -141,6 +142,11 @@ const styles = StyleSheet.create({
     color: "#8a8a8a",
     paddingLeft: 95,
     paddingTop: 5,
+  },
+  buttonText: {
+    fontFamily: "RobotoMedium",
+    fontSize: 20,
+    color: "#8a8a8a",
   },
   anotherOption: {
     marginTop: 50,

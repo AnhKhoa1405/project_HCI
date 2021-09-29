@@ -45,7 +45,7 @@ export default function MyService() {
         </Text>
         <Text style={styles.another}>Điều khoản và điều kiện</Text>
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity style={styles.test}>
         <View style={styles.button}>
           <Text style={styles.buttonText}>Hoàn tất</Text>
         </View>
