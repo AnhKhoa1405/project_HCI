@@ -32,6 +32,7 @@ export default function App() {
               fontFamily: "RobotoMedium",
               fontSize: 15,
             },
+            headerBackTitle: "",
           }}
           name="InputPhone"
           component={InputPhone}
@@ -44,6 +45,7 @@ export default function App() {
               fontFamily: "RobotoMedium",
               fontSize: 15,
             },
+            headerBackTitle: "",
           }}
           name="InputName"
           component={InputName}
@@ -56,12 +58,13 @@ export default function App() {
               fontFamily: "RobotoMedium",
               fontSize: 15,
             },
+            headerBackTitle: "",
           }}
           name="InputPassword"
           component={InputPassword}
         />
         <Stack.Screen
-          options={{ title: "" }}
+          options={{ title: "", headerBackTitle: "" }}
           name="GetLocation"
           component={GetLocation}
         />
