@@ -41,10 +41,11 @@ export default function MyService({ navigation }) {
             <Text style={styles.firstNum}>+84</Text>
             <View style={styles.afterFirstNum}></View>
           </TouchableOpacity>
-          {/* <TextInput
-            style={styles.textInput}
-            placeholder="Số điện thoại"
-          ></TextInput> */}
+          <TouchableOpacity>
+            <View style={styles.textInput}>
+              <Text style={styles.buttonText}>Số điện thoại</Text>
+            </View>
+          </TouchableOpacity>
           <View style={styles.anotherOption}>
             <View style={styles.line} />
             <Text style={styles.anotherTitle}>Hoặc đăng nhập bằng</Text>
