@@ -65,16 +65,16 @@ export default function MyService({ navigation }) {
               source={require("../assets/tuimg/facebook.png")}
             />
           </View>
-          <TouchableOpacity
-            onPress={() => {
-              navigation.navigate("Home");
-            }}
-          >
-            <Text style={styles.textAnother}>
-              Để sau nha mình muốn xem thêm chút nữa.
-            </Text>
-          </TouchableOpacity>
         </View>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.push("Footer");
+          }}
+        >
+          <Text style={styles.textAnother}>
+            Để sau nha mình muốn xem thêm chút nữa.
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

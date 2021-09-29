@@ -47,7 +47,7 @@ export default function MyService({ navigation }) {
       </View>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate("InputName");
+          navigation.navigate("GetLocation");
         }}
       >
         <View style={styles.button}>
