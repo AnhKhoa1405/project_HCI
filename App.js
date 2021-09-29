@@ -21,11 +21,11 @@ export default function App() {
           component={FooterHome}
         ></Stack.Screen>
         <Stack.Screen name="HomeStadium" component={HomeStadium}></Stack.Screen>
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Discount"
           options={{ headerTitle: "Custom title" }}
           component={Discount}
-        ></Stack.Screen>
+        ></Stack.Screen> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
