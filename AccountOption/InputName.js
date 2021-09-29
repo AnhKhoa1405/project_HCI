@@ -14,7 +14,7 @@ import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
 
-export default function MyService() {
+export default function MyService({ navigation }) {
   const [loaded] = useFonts({
     RobotoBlack: require("../assets/fonts/Roboto-Black.ttf"),
     RobotoThin: require("../assets/fonts/Roboto-Light.ttf"),
@@ -45,7 +45,11 @@ export default function MyService() {
         </Text>
         <Text style={styles.another}>Điều khoản và điều kiện</Text>
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("InputName");
+        }}
+      >
         <View style={styles.button}>
           <Text style={styles.buttonText}>Hoàn tất</Text>
         </View>

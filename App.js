@@ -28,7 +28,16 @@ export default function App() {
         <Stack.Screen name="InputName" component={InputName} />
         <Stack.Screen name="InputPassword" component={InputPassword} />
         <Stack.Screen name="GetLocation" component={GetLocation} />
-        <Stack.Screen name="Footer" component={FooterHome}></Stack.Screen>
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Footer"
+          component={FooterHome}
+        ></Stack.Screen>
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Home"
+          component={Home}
+        ></Stack.Screen>
         <Stack.Screen name="HomeStadium" component={HomeStadium}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>

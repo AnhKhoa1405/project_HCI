@@ -41,7 +41,11 @@ export default function MyService({ navigation }) {
             <Text style={styles.firstNum}>+84</Text>
             <View style={styles.afterFirstNum}></View>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("InputPhone");
+            }}
+          >
             <View style={styles.textInput}>
               <Text style={styles.buttonText}>Số điện thoại</Text>
             </View>
@@ -61,9 +65,15 @@ export default function MyService({ navigation }) {
               source={require("../assets/tuimg/facebook.png")}
             />
           </View>
-          <Text style={styles.textAnother}>
-            Để sau nha mình muốn xem thêm chút nữa.
-          </Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("Home");
+            }}
+          >
+            <Text style={styles.textAnother}>
+              Để sau nha mình muốn xem thêm chút nữa.
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>

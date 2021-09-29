@@ -1,5 +1,12 @@
 import React from "react";
-import { StyleSheet, View, Text, Image, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  ScrollView,
+  StatusBar,
+} from "react-native";
 import { Dimensions } from "react-native";
 import { useFonts } from "expo-font";
 
@@ -201,6 +208,12 @@ export default function Discount() {
   }
   return (
     <View style={styles.container}>
+      <StatusBar
+        backgroundColor="white"
+        barStyle="dark-content"
+        hidden={false}
+        translucent={true}
+      />
       <ScrollView showsVerticalScrollIndicator={false}>
         <Text
           style={{
@@ -227,5 +240,6 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "flex-start",
     backgroundColor: "#ACAFB3",
+    paddingTop: width / 15,
   },
 });
