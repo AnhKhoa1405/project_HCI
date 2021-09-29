@@ -32,7 +32,7 @@ export default function MyService() {
         ></Image>
         <Text style={styles.stepNumber}>1/3</Text>
       </View>
-      <View style={styles.mainCotent}>
+      <View>
         <Text style={styles.title}>
           Nhập số điện thoại của bạn để tiếp tục nhé
         </Text>
@@ -52,7 +52,7 @@ export default function MyService() {
           ></TextInput>
         </View>
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => {}}>
         <View style={styles.button}>
           <Text style={styles.buttonText}>Tiếp theo</Text>
         </View>
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   button: {
-    marginTop: "100%",
+    marginTop: width / 1.3,
     backgroundColor: "#3ac5c9",
     padding: 10,
     borderRadius: 5,

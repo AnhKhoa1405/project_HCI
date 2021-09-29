@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { Dimensions } from "react-native";
 import { useFonts } from "expo-font";
 import { TextInput } from "react-native-gesture-handler";
@@ -7,7 +7,7 @@ import { TextInput } from "react-native-gesture-handler";
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
 
-export default function MyService() {
+export default function MyService({ navigation }) {
   const [loaded] = useFonts({
     RobotoBlack: require("../assets/fonts/Roboto-Black.ttf"),
     RobotoThin: require("../assets/fonts/Roboto-Light.ttf"),
@@ -28,18 +28,23 @@ export default function MyService() {
           Hãy nhập số điện thoại để tiếp tục nhé!
         </Text>
         <View style={styles.blockInput}>
-          <View style={styles.wrapTempt}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("InputPhone");
+            }}
+            style={styles.wrapTempt}
+          >
             <Image
               style={styles.vnflag}
               source={require("../assets/tuimg/VNicon.png")}
             />
             <Text style={styles.firstNum}>+84</Text>
             <View style={styles.afterFirstNum}></View>
-          </View>
-          <TextInput
+          </TouchableOpacity>
+          {/* <TextInput
             style={styles.textInput}
             placeholder="Số điện thoại"
-          ></TextInput>
+          ></TextInput> */}
           <View style={styles.anotherOption}>
             <View style={styles.line} />
             <Text style={styles.anotherTitle}>Hoặc đăng nhập bằng</Text>
