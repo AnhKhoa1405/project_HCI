@@ -13,37 +13,37 @@ var height = Dimensions.get("window").height; //full height
 
 const ActionStack = createStackNavigator();
 
-const ActionStackScreenDiscount = () => {
-  return (
-    <ActionStack.Navigator>
-      <ActionStack.Screen
-        name="Khuyến Mãi"
-        component={Discount}
-      ></ActionStack.Screen>
-    </ActionStack.Navigator>
-  );
-};
+// const ActionStackScreenDiscount = () => {
+//   return (
+//     <ActionStack.Navigator>
+//       <ActionStack.Screen
+//         name="Khuyến Mãi"
+//         component={Discount}
+//       ></ActionStack.Screen>
+//     </ActionStack.Navigator>
+//   );
+// };
 
-const ActionStackScreenLovePitch = () => {
-  return (
-    <ActionStack.Navigator>
-      <ActionStack.Screen
-        name="Sân yêu thích"
-        component={LoveMyPitch}
-      ></ActionStack.Screen>
-    </ActionStack.Navigator>
-  );
-};
-const ActionStackScreenBookedPitch = () => {
-  return (
-    <ActionStack.Navigator>
-      <ActionStack.Screen
-        name="Sân Đã Đặt"
-        component={BookPitch}
-      ></ActionStack.Screen>
-    </ActionStack.Navigator>
-  );
-};
+// const ActionStackScreenLovePitch = () => {
+//   return (
+//     <ActionStack.Navigator>
+//       <ActionStack.Screen
+//         name="Sân yêu thích"
+//         component={LoveMyPitch}
+//       ></ActionStack.Screen>
+//     </ActionStack.Navigator>
+//   );
+// };
+// const ActionStackScreenBookedPitch = () => {
+//   return (
+//     <ActionStack.Navigator>
+//       <ActionStack.Screen
+//         name="Sân Đã Đặt"
+//         component={BookPitch}
+//       ></ActionStack.Screen>
+//     </ActionStack.Navigator>
+//   );
+// };
 
 const Tab = createBottomTabNavigator();
 
@@ -124,7 +124,7 @@ export default function FooterHome() {
       />
       <Tab.Screen
         name="BookPitch"
-        component={ActionStackScreenBookedPitch}
+        component={BookPitch}
         options={{
           tabBarIcon: ({ forcused }) => (
             <View
@@ -158,7 +158,7 @@ export default function FooterHome() {
       />
       <Tab.Screen
         name="LoveMyPitch"
-        component={ActionStackScreenLovePitch}
+        component={LoveMyPitch}
         options={{
           tabBarIcon: ({ forcused }) => (
             <View
@@ -192,7 +192,7 @@ export default function FooterHome() {
       />
       <Tab.Screen
         name="Discount"
-        component={ActionStackScreenDiscount}
+        component={Discount}
         options={{
           tabBarIcon: ({ forcused }) => (
             <View

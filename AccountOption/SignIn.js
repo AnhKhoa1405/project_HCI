@@ -59,22 +59,26 @@ export default function Signin({ navigation }) {
               source={require("../assets/tuimg/facebook.png")}
             />
           </View>
-          <TouchableOpacity
-            onPress={() => {
-              navigation.navigate("Home");
-            }}
-          >
-            <Text style={styles.textAnother}>
-              Để sau nha mình muốn xem thêm chút nữa.
-            </Text>
-          </TouchableOpacity>
         </View>
+        <TouchableOpacity
+          style={styles.btn}
+          onPress={() => {
+            navigation.navigate("Home");
+          }}
+        >
+          <Text style={styles.textAnother}>
+            Để sau nha mình muốn xem thêm chút nữa.
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  btn: {
+    zIndex: 999,
+  },
   container: {
     width: width,
     height: height,
@@ -158,7 +162,7 @@ const styles = StyleSheet.create({
     color: "#8a8a8a",
   },
   anotherOption: {
-    marginTop: 50,
+    marginTop: 20,
     height: 30,
     flexDirection: "row",
     alignItems: "center",
@@ -192,7 +196,7 @@ const styles = StyleSheet.create({
     height: 40,
   },
   textAnother: {
-    marginTop: 20,
+    marginTop: 120,
     fontFamily: "RobotoMedium",
     color: "#8a8a8a",
     textDecorationLine: "underline",

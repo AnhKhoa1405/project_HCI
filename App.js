@@ -24,13 +24,58 @@ export default function App() {
           name="SignIn"
           component={SignIn}
         />
-        <Stack.Screen name="InputPhone" component={InputPhone} />
-        <Stack.Screen name="InputName" component={InputName} />
-        <Stack.Screen name="InputPassword" component={InputPassword} />
-        <Stack.Screen name="GetLocation" component={GetLocation} />
-        <Stack.Screen name="Footer" component={FooterHome}></Stack.Screen>
+        <Stack.Screen
+          options={{
+            title: "1/3",
+            headerTitleStyle: {
+              textAlign: "right",
+              fontFamily: "RobotoMedium",
+              fontSize: 15,
+            },
+          }}
+          name="InputPhone"
+          component={InputPhone}
+        />
+        <Stack.Screen
+          options={{
+            title: "3/3",
+            headerTitleStyle: {
+              textAlign: "right",
+              fontFamily: "RobotoMedium",
+              fontSize: 15,
+            },
+          }}
+          name="InputName"
+          component={InputName}
+        />
+        <Stack.Screen
+          options={{
+            title: "2/3",
+            headerTitleStyle: {
+              textAlign: "right",
+              fontFamily: "RobotoMedium",
+              fontSize: 15,
+            },
+          }}
+          name="InputPassword"
+          component={InputPassword}
+        />
+        <Stack.Screen
+          options={{ title: "" }}
+          name="GetLocation"
+          component={GetLocation}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Footer"
+          component={FooterHome}
+        ></Stack.Screen>
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Home"
+          component={Home}
+        ></Stack.Screen>
         <Stack.Screen name="HomeStadium" component={HomeStadium}></Stack.Screen>
-        <Stack.Screen name="Home" component={Home}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

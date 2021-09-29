@@ -14,7 +14,7 @@ import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
 
-export default function InputPhone() {
+export default function MyService({ navigation }) {
   const [loaded] = useFonts({
     RobotoBlack: require("../assets/fonts/Roboto-Black.ttf"),
     RobotoThin: require("../assets/fonts/Roboto-Light.ttf"),
@@ -45,7 +45,11 @@ export default function InputPhone() {
           ></TextInput>
         </View>
       </View>
-      <TouchableOpacity onPress={() => {}}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("InputPassword");
+        }}
+      >
         <View style={styles.button}>
           <Text style={styles.buttonText}>Tiếp theo</Text>
         </View>
@@ -69,6 +73,7 @@ const styles = StyleSheet.create({
   stepNumber: {
     fontFamily: "RobotoMedium",
     fontSize: 15,
+    right: 10,
   },
   title: {
     fontFamily: "RobotoMedium",
@@ -111,7 +116,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   button: {
-    marginTop: width / 1.3,
+    marginTop: width - 40,
     backgroundColor: "#3ac5c9",
     padding: 10,
     borderRadius: 5,
