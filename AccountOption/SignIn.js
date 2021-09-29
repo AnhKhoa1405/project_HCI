@@ -20,7 +20,7 @@ export default function MyService() {
     <View style={styles.container}>
       <Image
         style={styles.logoSign}
-        source={require("../assets/img/logoSign.png")}
+        source={require("../assets/tuimg/logoSign.png")}
       />
       <View style={styles.whiteBg}>
         <Text style={styles.title}>XIN CHÀO BẠN</Text>
@@ -31,7 +31,7 @@ export default function MyService() {
           <View style={styles.wrapTempt}>
             <Image
               style={styles.vnflag}
-              source={require("../assets/img/VNicon.png")}
+              source={require("../assets/tuimg/VNicon.png")}
             />
             <Text style={styles.firstNum}>+84</Text>
             <View style={styles.afterFirstNum}></View>
@@ -48,11 +48,11 @@ export default function MyService() {
           <View style={styles.socialOption}>
             <Image
               style={styles.appleIcon}
-              source={require("../assets/img/apple.png")}
+              source={require("../assets/tuimg/apple.png")}
             />
             <Image
               style={styles.faceIcon}
-              source={require("../assets/img/facebook.png")}
+              source={require("../assets/tuimg/facebook.png")}
             />
           </View>
           <Text style={styles.textAnother}>
