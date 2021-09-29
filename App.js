@@ -6,6 +6,10 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import HomeStadium from "./ListStadium/HomeStadium";
 import SignIn from "./AccountOption/SignIn";
+import InputPhone from "./AccountOption/InputPhone";
+import InputName from "./AccountOption/InputName";
+import InputPassword from "./AccountOption/InputPassword";
+import GetLocation from "./AccountOption/GetLocation";
 import FooterHome from "./FooterPage/FooterHome";
 import Discount from "./Discount/Discount";
 
@@ -17,15 +21,15 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen
           options={{ headerShown: false }}
-          name="Footer"
-          component={FooterHome}
-        ></Stack.Screen>
+          name="SignIn"
+          component={SignIn}
+        />
+        <Stack.Screen name="InputPhone" component={InputPhone} />
+        <Stack.Screen name="InputName" component={InputName} />
+        <Stack.Screen name="InputPassword" component={InputPassword} />
+        <Stack.Screen name="GetLocation" component={GetLocation} />
+        <Stack.Screen name="Footer" component={FooterHome}></Stack.Screen>
         <Stack.Screen name="HomeStadium" component={HomeStadium}></Stack.Screen>
-        {/* <Stack.Screen
-          name="Discount"
-          options={{ headerTitle: "Custom title" }}
-          component={Discount}
-        ></Stack.Screen> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
