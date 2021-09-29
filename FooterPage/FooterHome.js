@@ -6,9 +6,44 @@ import Home from "../Home/Home";
 import LoveMyPitch from "../LovePitch/LoveMyPitch";
 import BookPitch from "../BookedPitch/BookPitch";
 import Discount from "../Discount/Discount";
+import { createStackNavigator } from "@react-navigation/stack";
 
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
+
+const ActionStack = createStackNavigator();
+
+const ActionStackScreenDiscount = () => {
+  return (
+    <ActionStack.Navigator>
+      <ActionStack.Screen
+        name="Khuyến Mãi"
+        component={Discount}
+      ></ActionStack.Screen>
+    </ActionStack.Navigator>
+  );
+};
+
+const ActionStackScreenLovePitch = () => {
+  return (
+    <ActionStack.Navigator>
+      <ActionStack.Screen
+        name="Sân yêu thích"
+        component={LoveMyPitch}
+      ></ActionStack.Screen>
+    </ActionStack.Navigator>
+  );
+};
+const ActionStackScreenBookedPitch = () => {
+  return (
+    <ActionStack.Navigator>
+      <ActionStack.Screen
+        name="Sân Đã Đặt"
+        component={BookPitch}
+      ></ActionStack.Screen>
+    </ActionStack.Navigator>
+  );
+};
 
 const Tab = createBottomTabNavigator();
 
@@ -89,7 +124,7 @@ export default function FooterHome() {
       />
       <Tab.Screen
         name="BookPitch"
-        component={BookPitch}
+        component={ActionStackScreenBookedPitch}
         options={{
           tabBarIcon: ({ forcused }) => (
             <View
@@ -123,7 +158,7 @@ export default function FooterHome() {
       />
       <Tab.Screen
         name="LoveMyPitch"
-        component={LoveMyPitch}
+        component={ActionStackScreenLovePitch}
         options={{
           tabBarIcon: ({ forcused }) => (
             <View
@@ -157,7 +192,7 @@ export default function FooterHome() {
       />
       <Tab.Screen
         name="Discount"
-        component={Discount}
+        component={ActionStackScreenDiscount}
         options={{
           tabBarIcon: ({ forcused }) => (
             <View

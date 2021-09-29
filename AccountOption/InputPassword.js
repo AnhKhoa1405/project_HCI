@@ -14,7 +14,7 @@ import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
 
-export default function MyService() {
+export default function InputPassword() {
   const [loaded] = useFonts({
     RobotoBlack: require("../assets/fonts/Roboto-Black.ttf"),
     RobotoThin: require("../assets/fonts/Roboto-Light.ttf"),

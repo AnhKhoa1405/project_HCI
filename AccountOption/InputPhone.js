@@ -14,7 +14,7 @@ import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
 
-export default function MyService() {
+export default function InputPhone() {
   const [loaded] = useFonts({
     RobotoBlack: require("../assets/fonts/Roboto-Black.ttf"),
     RobotoThin: require("../assets/fonts/Roboto-Light.ttf"),
@@ -25,14 +25,7 @@ export default function MyService() {
   }
   return (
     <View style={styles.container}>
-      <View style={styles.containerTop}>
-        <Image
-          source={require("../assets/tuimg/arrow.png")}
-          style={styles.imageArrow}
-        ></Image>
-        <Text style={styles.stepNumber}>1/3</Text>
-      </View>
-      <View style={styles.mainCotent}>
+      <View>
         <Text style={styles.title}>
           Nhập số điện thoại của bạn để tiếp tục nhé
         </Text>
@@ -52,7 +45,7 @@ export default function MyService() {
           ></TextInput>
         </View>
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => {}}>
         <View style={styles.button}>
           <Text style={styles.buttonText}>Tiếp theo</Text>
         </View>
@@ -68,19 +61,10 @@ const styles = StyleSheet.create({
     // backgroundColor: "#3ac5c9",
     position: "relative",
     backgroundColor: "white",
-    paddingTop: 40,
+    paddingTop: 20,
     paddingLeft: 10,
     paddingRight: 10,
     paddingBottom: 10,
-  },
-  containerTop: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 30,
-  },
-  imageArrow: {
-    width: 20,
-    height: 20,
   },
   stepNumber: {
     fontFamily: "RobotoMedium",
@@ -127,7 +111,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   button: {
-    marginTop: "100%",
+    marginTop: width / 1.3,
     backgroundColor: "#3ac5c9",
     padding: 10,
     borderRadius: 5,

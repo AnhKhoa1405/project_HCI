@@ -1,13 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { Dimensions } from "react-native";
 import { useFonts } from "expo-font";
-import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
 
-export default function MyService() {
+export default function Signin({ navigation }) {
   const [loaded] = useFonts({
     RobotoBlack: require("../assets/fonts/Roboto-Black.ttf"),
     RobotoThin: require("../assets/fonts/Roboto-Light.ttf"),
@@ -36,7 +35,11 @@ export default function MyService() {
             <Text style={styles.firstNum}>+84</Text>
             <View style={styles.afterFirstNum}></View>
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("InputPhone");
+            }}
+          >
             <View style={styles.textInput}>
               <Text style={styles.buttonText}>Số điện thoại</Text>
             </View>
@@ -56,9 +59,15 @@ export default function MyService() {
               source={require("../assets/tuimg/facebook.png")}
             />
           </View>
-          <Text style={styles.textAnother}>
-            Để sau nha mình muốn xem thêm chút nữa.
-          </Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("Home");
+            }}
+          >
+            <Text style={styles.textAnother}>
+              Để sau nha mình muốn xem thêm chút nữa.
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
