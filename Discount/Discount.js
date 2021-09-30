@@ -102,7 +102,7 @@ function renderData() {
             paddingTop: 10,
             paddingBottom: 10,
             alignItems: "center",
-            paddingLeft: 16,
+            paddingLeft: 23,
             justifyContent: "center",
           }}
         >
@@ -216,12 +216,17 @@ export default function Discount() {
         hidden={false}
         translucent={true}
       />
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={{ marginBottom: 70 }}
+      >
         <View
           style={{
             paddingTop: 10,
             paddingBottom: 10,
             backgroundColor: "white",
+            borderBottomWidth: 1,
+            borderBottomColor: "#3AC5C9",
           }}
         >
           <Text

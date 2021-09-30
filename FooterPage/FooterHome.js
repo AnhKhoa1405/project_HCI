@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import { Dimensions } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../Home/Home";
-import LoveMyPitch from "../LovePitch/LoveMyPitch";
+import Notification from "../Notification/Notification";
 import BookPitch from "../BookedPitch/BookPitch";
 import Discount from "../Discount/Discount";
 import Setting from "../Setting/Setting";
@@ -158,40 +158,6 @@ export default function FooterHome() {
         }}
       />
       <Tab.Screen
-        name="LoveMyPitch"
-        component={LoveMyPitch}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <View
-              style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: 3,
-              }}
-            >
-              <Image
-                source={require("../assets/khoaimg/love.png")}
-                resizeMode="contain"
-                style={{
-                  width: width / 16,
-                  height: width / 16,
-                  tintColor: focused ? "#3ac5c9" : "#748c94",
-                  marginBottom: 3,
-                }}
-              />
-              <Text
-                style={{
-                  color: focused ? "#3ac5c9" : "#748c94",
-                  fontSize: 10,
-                }}
-              >
-                SÂN YÊU THÍCH
-              </Text>
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
         name="Discount"
         component={Discount}
         options={{
@@ -224,6 +190,40 @@ export default function FooterHome() {
             </View>
           ),
           headerShown: true,
+        }}
+      />
+      <Tab.Screen
+        name="Notification"
+        component={Notification}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <View
+              style={{
+                alignItems: "center",
+                justifyContent: "center",
+                top: 3,
+              }}
+            >
+              <Image
+                source={require("../assets/khoaimg/notification.png")}
+                resizeMode="contain"
+                style={{
+                  width: width / 16,
+                  height: width / 16,
+                  tintColor: focused ? "#3ac5c9" : "#748c94",
+                  marginBottom: 3,
+                }}
+              />
+              <Text
+                style={{
+                  color: focused ? "#3ac5c9" : "#748c94",
+                  fontSize: 10,
+                }}
+              >
+                THÔNG BÁO
+              </Text>
+            </View>
+          ),
         }}
       />
       <Tab.Screen

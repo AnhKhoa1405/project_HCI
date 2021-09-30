@@ -79,8 +79,24 @@ export default function App() {
           name="Home"
           component={Home}
         ></Stack.Screen>
-        <Stack.Screen name="HomeStadium" component={HomeStadium}></Stack.Screen>
-        <Stack.Screen name="Suggest" component={ListSuggest} />
+        <Stack.Screen
+          options={{
+            title: "Danh sách",
+            headerBackTitle: "",
+            headerTitleAlign: "center",
+          }}
+          name="HomeStadium"
+          component={HomeStadium}
+        ></Stack.Screen>
+        <Stack.Screen
+          options={{
+            title: "Danh sách",
+            headerBackTitle: "",
+            headerTitleAlign: "center",
+          }}
+          name="Suggest"
+          component={ListSuggest}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
