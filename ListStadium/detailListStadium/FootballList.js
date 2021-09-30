@@ -1,9 +1,13 @@
 import React from "react";
 import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
-import { MaterialCommunityIcons, AntDesign } from "@expo/vector-icons";
+import {
+  MaterialCommunityIcons,
+  AntDesign,
+  Entypo,
+  FontAwesome5,
+} from "@expo/vector-icons";
 import { Dimensions } from "react-native";
 import { useFonts } from "expo-font";
-import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
@@ -144,7 +148,7 @@ function fillData(myData, filter) {
                     fontFamily: "RototoMedium",
                   }}
                 >
-                  {element.price} VND / 1h
+                  {element.price} vnđ / 1h
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -182,6 +186,7 @@ function fillData(myData, filter) {
                   fontSize: 16,
                   fontFamily: "RobotoMedium",
                   color: "#3ac5c9",
+                  fontWeight: "700",
                 }}
               >
                 Đặt sân ngay
