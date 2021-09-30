@@ -25,13 +25,6 @@ export default function MyService({ navigation }) {
   }
   return (
     <View style={styles.container}>
-      <View style={styles.containerTop}>
-        <Image
-          source={require("../assets/tuimg/arrow.png")}
-          style={styles.imageArrow}
-        ></Image>
-        <Text style={styles.stepNumber}>1/3</Text>
-      </View>
       <View>
         <Text style={styles.title}>
           Nhập số điện thoại của bạn để tiếp tục nhé
@@ -72,23 +65,15 @@ const styles = StyleSheet.create({
     // backgroundColor: "#3ac5c9",
     position: "relative",
     backgroundColor: "white",
-    paddingTop: 40,
+    paddingTop: 20,
     paddingLeft: 10,
     paddingRight: 10,
     paddingBottom: 10,
   },
-  containerTop: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 30,
-  },
-  imageArrow: {
-    width: 20,
-    height: 20,
-  },
   stepNumber: {
     fontFamily: "RobotoMedium",
     fontSize: 15,
+    right: 10,
   },
   title: {
     fontFamily: "RobotoMedium",
@@ -131,7 +116,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   button: {
-    marginTop: width / 1.3,
+    marginTop: width - 40,
     backgroundColor: "#3ac5c9",
     padding: 10,
     borderRadius: 5,

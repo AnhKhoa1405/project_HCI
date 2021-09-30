@@ -2,12 +2,11 @@ import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { Dimensions } from "react-native";
 import { useFonts } from "expo-font";
-import { TextInput } from "react-native-gesture-handler";
 
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
 
-export default function MyService({ navigation }) {
+export default function Signin({ navigation }) {
   const [loaded] = useFonts({
     RobotoBlack: require("../assets/fonts/Roboto-Black.ttf"),
     RobotoThin: require("../assets/fonts/Roboto-Light.ttf"),
@@ -28,19 +27,14 @@ export default function MyService({ navigation }) {
           Hãy nhập số điện thoại để tiếp tục nhé!
         </Text>
         <View style={styles.blockInput}>
-          <TouchableOpacity
-            onPress={() => {
-              navigation.navigate("InputPhone");
-            }}
-            style={styles.wrapTempt}
-          >
+          <View style={styles.wrapTempt}>
             <Image
               style={styles.vnflag}
               source={require("../assets/tuimg/VNicon.png")}
             />
             <Text style={styles.firstNum}>+84</Text>
             <View style={styles.afterFirstNum}></View>
-          </TouchableOpacity>
+          </View>
           <TouchableOpacity
             onPress={() => {
               navigation.navigate("InputPhone");
@@ -67,8 +61,9 @@ export default function MyService({ navigation }) {
           </View>
         </View>
         <TouchableOpacity
+          style={styles.btn}
           onPress={() => {
-            navigation.push("Footer");
+            navigation.navigate("Footer");
           }}
         >
           <Text style={styles.textAnother}>
@@ -81,6 +76,9 @@ export default function MyService({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+  btn: {
+    zIndex: 999,
+  },
   container: {
     width: width,
     height: height,
@@ -158,8 +156,13 @@ const styles = StyleSheet.create({
     paddingLeft: 95,
     paddingTop: 5,
   },
+  buttonText: {
+    fontFamily: "RobotoMedium",
+    fontSize: 20,
+    color: "#8a8a8a",
+  },
   anotherOption: {
-    marginTop: 50,
+    marginTop: 20,
     height: 30,
     flexDirection: "row",
     alignItems: "center",
@@ -193,7 +196,7 @@ const styles = StyleSheet.create({
     height: 40,
   },
   textAnother: {
-    marginTop: 20,
+    marginTop: 120,
     fontFamily: "RobotoMedium",
     color: "#8a8a8a",
     textDecorationLine: "underline",

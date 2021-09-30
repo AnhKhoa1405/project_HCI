@@ -6,6 +6,7 @@ import Home from "../Home/Home";
 import LoveMyPitch from "../LovePitch/LoveMyPitch";
 import BookPitch from "../BookedPitch/BookPitch";
 import Discount from "../Discount/Discount";
+import Setting from "../Setting/Setting";
 import { createStackNavigator } from "@react-navigation/stack";
 
 var width = Dimensions.get("window").width; //full width
@@ -227,7 +228,7 @@ export default function FooterHome() {
       />
       <Tab.Screen
         name="Settings"
-        component={Home}
+        component={Setting}
         options={{
           tabBarIcon: ({ forcused }) => (
             <View

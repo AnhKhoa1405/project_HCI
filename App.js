@@ -24,10 +24,50 @@ export default function App() {
           name="SignIn"
           component={SignIn}
         />
-        <Stack.Screen name="InputPhone" component={InputPhone} />
-        <Stack.Screen name="InputName" component={InputName} />
-        <Stack.Screen name="InputPassword" component={InputPassword} />
-        <Stack.Screen name="GetLocation" component={GetLocation} />
+        <Stack.Screen
+          options={{
+            title: "1/3",
+            headerTitleStyle: {
+              textAlign: "right",
+              fontFamily: "RobotoMedium",
+              fontSize: 15,
+            },
+            headerBackTitle: "",
+          }}
+          name="InputPhone"
+          component={InputPhone}
+        />
+        <Stack.Screen
+          options={{
+            title: "3/3",
+            headerTitleStyle: {
+              textAlign: "right",
+              fontFamily: "RobotoMedium",
+              fontSize: 15,
+            },
+            headerBackTitle: "",
+          }}
+          name="InputName"
+          component={InputName}
+        />
+        <Stack.Screen
+          options={{
+            title: "2/3",
+            headerTitleStyle: {
+              textAlign: "right",
+              fontFamily: "RobotoMedium",
+              fontSize: 15,
+            },
+            headerBackTitle: "",
+          }}
+          name="InputPassword"
+          component={InputPassword}
+        />
+        <Stack.Screen
+          options={{ title: "", headerBackTitle: "" }}
+          name="GetLocation"
+          component={GetLocation}
+        />
         <Stack.Screen
           options={{ headerShown: false }}
           name="Footer"

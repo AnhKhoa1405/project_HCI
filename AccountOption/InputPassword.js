@@ -25,13 +25,6 @@ export default function MyService({ navigation }) {
   }
   return (
     <View style={styles.container}>
-      <View style={styles.containerTop}>
-        <Image
-          source={require("../assets/tuimg/arrow.png")}
-          style={styles.imageArrow}
-        ></Image>
-        <Text style={styles.stepNumber}>2/3</Text>
-      </View>
       <View style={styles.mainCotent}>
         <Text style={styles.title}>Đặt mật khẩu</Text>
         <Text style={styles.titleDesc}>Độ dài mật khẩu ít nhất là 6 ký tự</Text>
@@ -67,7 +60,7 @@ const styles = StyleSheet.create({
     // backgroundColor: "#3ac5c9",
     position: "relative",
     backgroundColor: "white",
-    paddingTop: 40,
+    paddingTop: 20,
     paddingLeft: 10,
     paddingRight: 10,
     paddingBottom: 10,
@@ -108,7 +101,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   button: {
-    marginTop: "80%",
+    marginTop: width - 40,
     backgroundColor: "#3ac5c9",
     padding: 10,
     borderRadius: 5,
