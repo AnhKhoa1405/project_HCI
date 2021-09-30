@@ -31,7 +31,10 @@ export default function HeadingHome({ navigation }) {
           </View>
         </View>
         <View style={[styles.inputStyle, styles.marginL16]}>
-          <TextInput style={styles.paddingTR} placeholder="Tìm các loại sân" />
+          <TextInput
+            style={{ ...styles.paddingTR }}
+            placeholder="Tìm các loại sân"
+          />
         </View>
       </View>
     </View>

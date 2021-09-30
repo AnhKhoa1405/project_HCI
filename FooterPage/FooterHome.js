@@ -93,7 +93,7 @@ export default function FooterHome() {
         name="Home"
         component={Home}
         options={{
-          tabBarIcon: ({ forcused }) => (
+          tabBarIcon: ({ focused }) => (
             <View
               style={{
                 alignItems: "center",
@@ -107,13 +107,13 @@ export default function FooterHome() {
                 style={{
                   width: width / 16,
                   height: width / 16,
-                  tintColor: forcused ? "#e32f46" : "#748c94",
+                  tintColor: focused ? "#3ac5c9" : "#748c94",
                   marginBottom: 3,
                 }}
               />
               <Text
                 style={{
-                  color: forcused ? "#e32f46" : "#748c94",
+                  color: focused ? "#3ac5c9" : "#748c94",
                   fontSize: 10,
                 }}
               >
@@ -127,7 +127,7 @@ export default function FooterHome() {
         name="BookPitch"
         component={BookPitch}
         options={{
-          tabBarIcon: ({ forcused }) => (
+          tabBarIcon: ({ focused }) => (
             <View
               style={{
                 alignItems: "center",
@@ -141,13 +141,13 @@ export default function FooterHome() {
                 style={{
                   width: width / 16,
                   height: width / 16,
-                  tintColor: forcused ? "#e32f46" : "#748c94",
+                  tintColor: focused ? "#3ac5c9" : "#748c94",
                   marginBottom: 3,
                 }}
               />
               <Text
                 style={{
-                  color: forcused ? "#e32f46" : "#748c94",
+                  color: focused ? "#3ac5c9" : "#748c94",
                   fontSize: 10,
                 }}
               >
@@ -161,7 +161,7 @@ export default function FooterHome() {
         name="LoveMyPitch"
         component={LoveMyPitch}
         options={{
-          tabBarIcon: ({ forcused }) => (
+          tabBarIcon: ({ focused }) => (
             <View
               style={{
                 alignItems: "center",
@@ -175,13 +175,13 @@ export default function FooterHome() {
                 style={{
                   width: width / 16,
                   height: width / 16,
-                  tintColor: forcused ? "#e32f46" : "#748c94",
+                  tintColor: focused ? "#3ac5c9" : "#748c94",
                   marginBottom: 3,
                 }}
               />
               <Text
                 style={{
-                  color: forcused ? "#e32f46" : "#748c94",
+                  color: focused ? "#3ac5c9" : "#748c94",
                   fontSize: 10,
                 }}
               >
@@ -195,7 +195,7 @@ export default function FooterHome() {
         name="Discount"
         component={Discount}
         options={{
-          tabBarIcon: ({ forcused }) => (
+          tabBarIcon: ({ focused }) => (
             <View
               style={{
                 alignItems: "center",
@@ -209,13 +209,13 @@ export default function FooterHome() {
                 style={{
                   width: width / 16,
                   height: width / 16,
-                  tintColor: forcused ? "#e32f46" : "#748c94",
+                  tintColor: focused ? "#3ac5c9" : "#748c94",
                   marginBottom: 3,
                 }}
               />
               <Text
                 style={{
-                  color: forcused ? "#e32f46" : "#748c94",
+                  color: focused ? "#3ac5c9" : "#748c94",
                   fontSize: 10,
                 }}
               >
@@ -230,7 +230,7 @@ export default function FooterHome() {
         name="Settings"
         component={Setting}
         options={{
-          tabBarIcon: ({ forcused }) => (
+          tabBarIcon: ({ focused }) => (
             <View
               style={{
                 alignItems: "center",
@@ -244,13 +244,13 @@ export default function FooterHome() {
                 style={{
                   width: width / 16,
                   height: width / 16,
-                  tintColor: forcused ? "#e32f46" : "#748c94",
+                  tintColor: focused ? "#3ac5c9" : "#748c94",
                   marginBottom: 3,
                 }}
               />
               <Text
                 style={{
-                  color: forcused ? "#e32f46" : "#748c94",
+                  color: focused ? "#3ac5c9" : "#748c94",
                   fontSize: 10,
                 }}
               >
