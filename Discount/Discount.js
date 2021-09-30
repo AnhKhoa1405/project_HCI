@@ -128,7 +128,7 @@ function renderData() {
                 width: width / 5,
                 height: width / 5,
               }}
-              source={require("../assets/khoaimg/discountBaemin.jpg")}
+              source={require("../assets/khoaimg/discount.png")}
             />
             <View
               style={{

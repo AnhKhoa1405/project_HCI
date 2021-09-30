@@ -10,35 +10,164 @@ import FootballList from "./detailListStadium/FootballList";
 // import VolleyballList from "./detailListStadium/VolleyballList";
 import { Picker } from "@react-native-picker/picker";
 import { Dimensions } from "react-native";
+import HighRating from "../Home/detailHome/HighRating";
+import BlankPitch from "../Home/detailHome/BlankPitch";
+import NearHouse from "../Home/detailHome/NearHourse";
 
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
 
-function checkRoute(name) {
+function checkRoute(filter, name, navigation) {
   switch (name) {
-    case "Football":
-      return <FootballList myData={data} />;
-    case "Tennis":
+    case "Bóng đá":
+      return <FootballList myData={data} myFilter={filter} />;
+    case "Quần vợt":
       // return <TennisList />;
-      return <FootballList myData={data} />;
-    case "Basketball":
+      return <FootballList myData={data} myFilter={filter} />;
+    case "Bóng rổ":
       // return <BasketBallList />;
-      return <FootballList myData={data} />;
-    case "Badminton":
+      return <FootballList myData={data} myFilter={filter} />;
+    case "Cầu lông":
       // return <BadmintonList />;
-      return <FootballList myData={data} />;
-    case "Table Te...":
+      return <FootballList myData={data} myFilter={filter} />;
+    case "Bóng bàn":
       // return <TableTennisList />;
-      return <FootballList myData={data} />;
-    case "Volleyball":
+      return <FootballList myData={data} myFilter={filter} />;
+    case "Bóng chuyền":
       // return <VolleyballList />;
-      return <FootballList myData={data} />;
-    case "Skating":
+      return <FootballList myData={data} myFilter={filter} />;
+    case "Trượt ván":
       // return <SkatingList />;
-      return <FootballList myData={data} />;
-    case "Boxing":
+      return <FootballList myData={data} myFilter={filter} />;
+    case "Đấm bốc":
       // return <BoxingList />;
-      return <FootballList myData={data} />;
+      return <FootballList myData={data} myFilter={filter} />;
+  }
+}
+
+function checkFilter(filter, name) {
+  switch (filter) {
+    case "near":
+      return (
+        <View
+          style={{
+            paddingLeft: 16,
+            paddingTop: 16,
+            paddingBottom: 16,
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
+          <Text
+            style={{
+              fontFamily: "RobotoBlack",
+              fontSize: 36,
+              color: "#3ac5c9",
+            }}
+          >
+            {name} -
+          </Text>
+          <Text
+            style={{
+              fontFamily: "RobotoBlack",
+              fontSize: 24,
+              color: "#3ac5c9",
+              paddingLeft: 5,
+              width: width / 2,
+            }}
+          >
+            (Gần nhà)
+          </Text>
+        </View>
+      );
+    case "blank":
+      return (
+        <View
+          style={{
+            paddingLeft: 16,
+            paddingTop: 16,
+            paddingBottom: 16,
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
+          <Text
+            style={{
+              fontFamily: "RobotoBlack",
+              fontSize: 32,
+              color: "#3ac5c9",
+            }}
+          >
+            {name} -
+          </Text>
+          <Text
+            style={{
+              fontFamily: "RobotoBlack",
+              fontSize: 20,
+              color: "#3ac5c9",
+              paddingLeft: 5,
+              width: width / 2,
+            }}
+          >
+            (Sân còn trống)
+          </Text>
+        </View>
+      );
+    case "high":
+      return (
+        <View
+          style={{
+            paddingLeft: 16,
+            paddingTop: 16,
+            paddingBottom: 16,
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
+          <Text
+            style={{
+              fontFamily: "RobotoBlack",
+              fontSize: 36,
+              color: "#3ac5c9",
+            }}
+          >
+            {name} -
+          </Text>
+          <Text
+            style={{
+              fontFamily: "RobotoBlack",
+              fontSize: 24,
+              color: "#3ac5c9",
+              paddingLeft: 5,
+              width: width / 3,
+            }}
+          >
+            (Sân được đánh giá cao)
+          </Text>
+        </View>
+      );
+    case "none":
+      return (
+        <View
+          style={{
+            paddingLeft: 16,
+            paddingTop: 16,
+            paddingBottom: 16,
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
+          <Text
+            style={{
+              fontFamily: "RobotoBlack",
+              fontSize: 36,
+              color: "#3ac5c9",
+            }}
+          >
+            {name}
+          </Text>
+        </View>
+      );
   }
 }
 
@@ -246,195 +375,11 @@ const data = [
 ];
 
 export default function HomeStadium({ navigation, route }) {
-  const [language, setLanguage] = useState(0);
-  const [filterByStore, setStore] = useState(0);
-  const [sale, setSale] = useState(0);
-  const [active, setActive] = useState(0);
-
   return (
     <View style={styles.container}>
-      <ScrollView
-        style={{ height: width / 6 }}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-      >
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-          }}
-        >
-          <View
-            style={{
-              width: width / 3.1,
-              paddingTop: 10,
-              paddingBottom: 10,
-              marginLeft: 20,
-              borderWidth: 1,
-              borderRadius: 20,
-              borderColor: "#3ac5c9",
-            }}
-          >
-            <Picker
-              selectedValue={language}
-              onValueChange={(itemValue) => setLanguage(itemValue)}
-            >
-              <Picker.Item
-                style={{
-                  fontSize: 12,
-                }}
-                label="Sắp xếp"
-                value="java"
-              />
-              <Picker.Item
-                style={{
-                  fontSize: 12,
-                }}
-                label="Đánh giá tốt"
-                value="js"
-              />
-              <Picker.Item
-                style={{
-                  fontSize: 12,
-                }}
-                label="Phổ biến"
-                value="rn"
-              />
-            </Picker>
-          </View>
-          <Text
-            style={{
-              fontSize: 18,
-              marginLeft: 10,
-            }}
-          >
-            Lọc:{" "}
-          </Text>
-          <View
-            style={{
-              width: width / 2.2,
-              paddingTop: 10,
-              paddingBottom: 10,
-              marginLeft: 10,
-              borderWidth: 1,
-              borderRadius: 20,
-              borderColor: "#3ac5c9",
-            }}
-          >
-            <Picker
-              selectedValue={filterByStore}
-              onValueChange={(itemValue) => setStore(itemValue)}
-            >
-              <Picker.Item
-                style={{
-                  fontSize: 12,
-                }}
-                label="Danh mục & cửa hàng"
-                value="java"
-              />
-              <Picker.Item
-                style={{
-                  fontSize: 12,
-                }}
-                label="Mart"
-                value="js"
-              />
-              <Picker.Item
-                style={{
-                  fontSize: 12,
-                }}
-                label="Baemin Kitchen"
-                value="rn"
-              />
-            </Picker>
-          </View>
-          <View
-            style={{
-              width: width / 3.2,
-              paddingTop: 10,
-              paddingBottom: 10,
-              marginLeft: 10,
-              borderWidth: 1,
-              borderRadius: 20,
-              borderColor: "#3ac5c9",
-            }}
-          >
-            <Picker
-              selectedValue={sale}
-              onValueChange={(itemValue) => setSale(itemValue)}
-            >
-              <Picker.Item
-                style={{
-                  fontSize: 12,
-                }}
-                label="Khuyến mãi"
-                value="java"
-              />
-              <Picker.Item
-                style={{
-                  fontSize: 12,
-                }}
-                label="Trên 40%"
-                value="js"
-              />
-              <Picker.Item
-                style={{
-                  fontSize: 12,
-                }}
-                label="Dưới 40%"
-                value="rn"
-              />
-            </Picker>
-          </View>
-          <View
-            style={{
-              width: width / 2.9,
-              paddingTop: 10,
-              paddingBottom: 10,
-              marginLeft: 10,
-              borderWidth: 1,
-              borderRadius: 20,
-              borderColor: "#3ac5c9",
-            }}
-          >
-            <Picker
-              selectedValue={active}
-              onValueChange={(itemValue) => setActive(itemValue)}
-            >
-              <Picker.Item
-                style={{
-                  fontSize: 12,
-                }}
-                label="Đang mở cửa"
-                value="java"
-              />
-              <Picker.Item
-                style={{
-                  fontSize: 12,
-                }}
-                label="KFC"
-                value="js"
-              />
-              <Picker.Item
-                style={{
-                  fontSize: 12,
-                }}
-                label="Kichi Kichi"
-                value="rn"
-              />
-              <Picker.Item
-                style={{
-                  fontSize: 12,
-                }}
-                label="Lotteria"
-                value="nn"
-              />
-            </Picker>
-          </View>
-        </View>
-      </ScrollView>
       <ScrollView showsVerticalScrollIndicator={false}>
-        {checkRoute(route.params.name)}
+        <View>{checkFilter(route.params.filter, route.params.name)}</View>
+        {checkRoute(route.params.filter, route.params.name, navigation)}
       </ScrollView>
     </View>
   );

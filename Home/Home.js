@@ -1,10 +1,12 @@
 import React from "react";
 import { StyleSheet, View, ScrollView, Button } from "react-native";
+import BlankPitch from "./detailHome/BlankPitch";
 import AnotherSales from "./detailHome/AnotherSales";
 import HeadingHome from "./detailHome/HeadingHome";
+import HighRating from "./detailHome/HighRating";
 import MyCarousel from "./detailHome/MyCarousel";
 import MyCategory from "./detailHome/MyCategory";
-import MyService from "./detailHome/MyService";
+import NearHome from "./detailHome/NearHourse";
 
 export default function Home({ navigation }) {
   return (
@@ -13,7 +15,9 @@ export default function Home({ navigation }) {
       <ScrollView showsVerticalScrollIndicator={false}>
         <MyCarousel />
         <MyCategory title={navigation} />
-        <MyService />
+        <NearHome title={navigation} />
+        <HighRating title={navigation} />
+        <BlankPitch title={navigation} />
         <AnotherSales />
       </ScrollView>
     </View>
