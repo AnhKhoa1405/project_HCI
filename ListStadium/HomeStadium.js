@@ -272,7 +272,7 @@ export default function HomeStadium({ navigation, route }) {
               marginLeft: 20,
               borderWidth: 1,
               borderRadius: 20,
-              borderColor: "brown",
+              borderColor: "#3ac5c9",
             }}
           >
             <Picker
@@ -318,7 +318,7 @@ export default function HomeStadium({ navigation, route }) {
               marginLeft: 10,
               borderWidth: 1,
               borderRadius: 20,
-              borderColor: "brown",
+              borderColor: "#3ac5c9",
             }}
           >
             <Picker
@@ -356,7 +356,7 @@ export default function HomeStadium({ navigation, route }) {
               marginLeft: 10,
               borderWidth: 1,
               borderRadius: 20,
-              borderColor: "brown",
+              borderColor: "#3ac5c9",
             }}
           >
             <Picker
@@ -394,7 +394,7 @@ export default function HomeStadium({ navigation, route }) {
               marginLeft: 10,
               borderWidth: 1,
               borderRadius: 20,
-              borderColor: "brown",
+              borderColor: "#3ac5c9",
             }}
           >
             <Picker

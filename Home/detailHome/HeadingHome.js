@@ -55,6 +55,8 @@ const styles = StyleSheet.create({
     height: height / 6,
     paddingTop: 10,
     marginTop: 15,
+    borderBottomColor: "#ccc",
+    borderBottomWidth: 1,
   },
   rowFlexAlignJust: {
     display: "flex",
@@ -109,7 +111,7 @@ const styles = StyleSheet.create({
   },
 
   inputStyle: {
-    backgroundColor: "#ccc",
+    backgroundColor: "#eff3f6",
     color: "#7C7D7F",
     borderRadius: 10,
     margin: "auto",

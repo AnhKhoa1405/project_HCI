@@ -23,7 +23,8 @@ function fillData(myData) {
           marginTop: 10,
           justifyContent: "center",
           width: width,
-          paddingLeft: 8,
+          paddingLeft: 5,
+          paddingRight:5,
         }}
       >
         <View
@@ -55,7 +56,7 @@ function fillData(myData) {
                   }}
                   name="check-decagram"
                   size={24}
-                  color="#3bb54a"
+                  color="#3ac5c9"
                 />
                 <Text
                   style={{
@@ -75,9 +76,8 @@ function fillData(myData) {
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <Entypo
                 name="map"
-                size={24}
-                color="#3bb54a"
-                style={{ marginRight: 5 }}
+                color="#3ac5c9"
+                style={{ marginRight: 5,fontSize:24 }}
               />
               <Text style={{ width: width / 2, fontFamily: "RototoMedium" }}>
                 {element.address}
@@ -92,9 +92,8 @@ function fillData(myData) {
             >
               <MaterialCommunityIcons
                 name="soccer-field"
-                size={24}
-                color="#3bb54a"
-                style={{ marginRight: 7 }}
+                color="#3ac5c9"
+                style={{  marginRight: 7,fontSize:25}}
               />
               <Text
                 style={{
@@ -126,9 +125,8 @@ function fillData(myData) {
               >
                 <FontAwesome5
                   name="money-bill"
-                  size={24}
-                  color="#3bb54a"
-                  style={{ marginRight: 2 }}
+                  color="#3ac5c9"
+                  style={{ marginRight: 2,fontSize:20 }}
                 />
                 <Text
                   style={{
@@ -138,11 +136,11 @@ function fillData(myData) {
                     fontFamily: "RototoMedium",
                   }}
                 >
-                  {element.price} vnđ / 1h
+                  {element.price} VND / 1h
                 </Text>
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                <Entypo name="location-pin" size={24} color="#3bb54a" />
+                <Entypo name="location-pin" size={24} color="#3ac5c9" />
                 <Text
                   style={{
                     fontSize: 16,
@@ -168,7 +166,7 @@ function fillData(myData) {
               }}
             >
               <Text
-                style={{ textAlign: "center", fontSize: 16, fontWeight: "600" }}
+                style={{ textAlign: "center", fontSize: 16, fontFamily:"RobotoMedium",color:"white" }}
               >
                 Đặt sân ngay
               </Text>
