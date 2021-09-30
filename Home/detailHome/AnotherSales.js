@@ -18,7 +18,15 @@ export default function AnotherSales() {
   }
   return (
     <View style={styles.container}>
-      <Text style={styles.solganText}>Sân yêu thích</Text>
+      <Text
+        style={{
+          ...styles.solganText,
+          fontFamily: "RobotoBlack",
+          fontSize: 20,
+        }}
+      >
+        Có thể bạn sẽ thích?
+      </Text>
       <View
         style={{
           flexDirection: "column",

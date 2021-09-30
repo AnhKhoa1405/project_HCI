@@ -12,6 +12,7 @@ import InputPassword from "./AccountOption/InputPassword";
 import GetLocation from "./AccountOption/GetLocation";
 import FooterHome from "./FooterPage/FooterHome";
 import Discount from "./Discount/Discount";
+import ListSuggest from "./Home/detailHome/ListSuggest";
 
 const Stack = createStackNavigator();
 
@@ -19,7 +20,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
+        {/* <Stack.Screen
           options={{ headerShown: false }}
           name="SignIn"
           component={SignIn}
@@ -67,7 +68,7 @@ export default function App() {
           options={{ title: "", headerBackTitle: "" }}
           name="GetLocation"
           component={GetLocation}
-        />
+        /> */}
         <Stack.Screen
           options={{ headerShown: false }}
           name="Footer"
@@ -79,6 +80,7 @@ export default function App() {
           component={Home}
         ></Stack.Screen>
         <Stack.Screen name="HomeStadium" component={HomeStadium}></Stack.Screen>
+        <Stack.Screen name="Suggest" component={ListSuggest} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -8,7 +8,7 @@ import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
 
-function fillData(myData) {
+function fillData(myData, filter) {
   return myData.map((element) => {
     return (
       <View
@@ -24,7 +24,7 @@ function fillData(myData) {
           justifyContent: "center",
           width: width,
           paddingLeft: 5,
-          paddingRight:5,
+          paddingRight: 5,
         }}
       >
         <View
@@ -70,14 +70,22 @@ function fillData(myData) {
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <AntDesign name="star" size={24} color="#F7B603" />
-                <Text style={{ fontSize: 16 }}>{element.rating}</Text>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontFamily:
+                      filter === "high" ? "RobotoBlack" : "RototoMedium",
+                  }}
+                >
+                  {element.rating}
+                </Text>
               </View>
             </View>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <Entypo
                 name="map"
                 color="#3ac5c9"
-                style={{ marginRight: 5,fontSize:24 }}
+                style={{ marginRight: 5, fontSize: 24 }}
               />
               <Text style={{ width: width / 2, fontFamily: "RototoMedium" }}>
                 {element.address}
@@ -93,7 +101,7 @@ function fillData(myData) {
               <MaterialCommunityIcons
                 name="soccer-field"
                 color="#3ac5c9"
-                style={{  marginRight: 7,fontSize:25}}
+                style={{ marginRight: 7, fontSize: 25 }}
               />
               <Text
                 style={{
@@ -126,7 +134,7 @@ function fillData(myData) {
                 <FontAwesome5
                   name="money-bill"
                   color="#3ac5c9"
-                  style={{ marginRight: 2,fontSize:20 }}
+                  style={{ marginRight: 2, fontSize: 20 }}
                 />
                 <Text
                   style={{
@@ -144,8 +152,9 @@ function fillData(myData) {
                 <Text
                   style={{
                     fontSize: 16,
-                    color: "#969EA6",
-                    fontFamily: "RobotoBlack",
+                    color: "black",
+                    fontFamily:
+                      filter === "near" ? "RobotoBlack" : "RototoMedium",
                   }}
                 >
                   {element.distance} km
@@ -159,14 +168,21 @@ function fillData(myData) {
                 marginTop: 10,
                 paddingTop: 5,
                 paddingBottom: 5,
-                backgroundColor: "red",
+                backgroundColor: "white",
                 borderWidth: 1,
                 borderRadius: 5,
-                borderColor: "red",
+                // borderColor: "red",
+                borderWidth: 2,
+                borderColor: "#3ac5c9",
               }}
             >
               <Text
-                style={{ textAlign: "center", fontSize: 16, fontFamily:"RobotoMedium",color:"white" }}
+                style={{
+                  textAlign: "center",
+                  fontSize: 16,
+                  fontFamily: "RobotoMedium",
+                  color: "#3ac5c9",
+                }}
               >
                 Đặt sân ngay
               </Text>
@@ -182,12 +198,12 @@ export default function FootballList(props) {
   const [loaded] = useFonts({
     RobotoBlack: require("../../assets/fonts/Roboto-Black.ttf"),
     RobotoThin: require("../../assets/fonts/Roboto-Thin.ttf"),
-    RototoMedium: require("../../assets/fonts/Roboto-Medium.ttf"),
+    RobotoMedium: require("../../assets/fonts/Roboto-Medium.ttf"),
   });
   if (!loaded) {
     return null;
   }
-  return <View>{fillData(props.myData)}</View>;
+  return <View>{fillData(props.myData, props.myFilter)}</View>;
 }
 
 const styles = StyleSheet.create({
