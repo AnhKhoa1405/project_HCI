@@ -20,28 +20,44 @@ var height = Dimensions.get("window").height; //full height
 function checkRoute(filter, name, navigation) {
   switch (name) {
     case "Bóng đá":
-      return <FootballList myData={data} myFilter={filter} />;
+      return (
+        <FootballList myData={data} myFilter={filter} navigation={navigation} />
+      );
     case "Quần vợt":
       // return <TennisList />;
-      return <FootballList myData={data} myFilter={filter} />;
+      return (
+        <FootballList myData={data} myFilter={filter} navigation={navigation} />
+      );
     case "Bóng rổ":
       // return <BasketBallList />;
-      return <FootballList myData={data} myFilter={filter} />;
+      return (
+        <FootballList myData={data} myFilter={filter} navigation={navigation} />
+      );
     case "Cầu lông":
       // return <BadmintonList />;
-      return <FootballList myData={data} myFilter={filter} />;
+      return (
+        <FootballList myData={data} myFilter={filter} navigation={navigation} />
+      );
     case "Bóng bàn":
       // return <TableTennisList />;
-      return <FootballList myData={data} myFilter={filter} />;
+      return (
+        <FootballList myData={data} myFilter={filter} navigation={navigation} />
+      );
     case "Bóng chuyền":
       // return <VolleyballList />;
-      return <FootballList myData={data} myFilter={filter} />;
+      return (
+        <FootballList myData={data} myFilter={filter} navigation={navigation} />
+      );
     case "Trượt ván":
       // return <SkatingList />;
-      return <FootballList myData={data} myFilter={filter} />;
+      return (
+        <FootballList myData={data} myFilter={filter} navigation={navigation} />
+      );
     case "Đấm bốc":
       // return <BoxingList />;
-      return <FootballList myData={data} myFilter={filter} />;
+      return (
+        <FootballList myData={data} myFilter={filter} navigation={navigation} />
+      );
   }
 }
 

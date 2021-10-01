@@ -13,6 +13,7 @@ import GetLocation from "./AccountOption/GetLocation";
 import FooterHome from "./FooterPage/FooterHome";
 import Discount from "./Discount/Discount";
 import ListSuggest from "./Home/detailHome/ListSuggest";
+import DetailStadium from "./ListStadium/detailStadium/DetailStadium";
 
 const Stack = createStackNavigator();
 
@@ -96,6 +97,15 @@ export default function App() {
           }}
           name="Suggest"
           component={ListSuggest}
+        />
+        <Stack.Screen
+          options={{
+            title: "Detail",
+            headerBackTitle: "",
+            headerTitleAlign: "center",
+          }}
+          name="DetailStadium"
+          component={DetailStadium}
         />
       </Stack.Navigator>
     </NavigationContainer>

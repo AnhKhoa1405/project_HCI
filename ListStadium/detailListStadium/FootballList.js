@@ -12,7 +12,7 @@ import { useFonts } from "expo-font";
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
 
-function fillData(myData, filter) {
+function fillData(myData, filter, navigation) {
   return myData.map((element) => {
     return (
       <View
@@ -38,17 +38,40 @@ function fillData(myData, filter) {
             alignItems: "center",
           }}
         >
-          <Image
-            style={{
-              width: width / 3.5,
-              height: width / 3.5,
-              resizeMode: "stretch",
-              borderRadius: 10,
-            }}
-            source={{
-              uri: element.img,
-            }}
-          />
+          <View>
+            <Image
+              style={{
+                width: width / 3.5,
+                height: width / 3.5,
+                resizeMode: "stretch",
+                borderRadius: 10,
+              }}
+              source={{
+                uri: element.img,
+              }}
+            />
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("DetailStadium");
+              }}
+            >
+              <Text
+                style={{
+                  fontStyle: "italic",
+                  textDecorationLine: "underline",
+                  fontSize: 18,
+                  color: "black",
+                  fontFamily: "RobotoBlack",
+                  fontWeight: "700",
+                  textAlign: "center",
+                  marginTop: 5,
+                }}
+              >
+                Xem thêm
+              </Text>
+            </TouchableOpacity>
+          </View>
+
           <View style={{ marginLeft: 8 }}>
             <View
               style={{ flexDirection: "row", justifyContent: "space-around" }}
@@ -209,7 +232,9 @@ export default function FootballList(props) {
   if (!loaded) {
     return null;
   }
-  return <View>{fillData(props.myData, props.myFilter)}</View>;
+  return (
+    <View>{fillData(props.myData, props.myFilter, props.navigation)}</View>
+  );
 }
 
 const styles = StyleSheet.create({
