@@ -95,7 +95,7 @@ const data = [
   },
 ];
 
-function renderDisplay() {
+function renderDisplay(navigation) {
   return data.map((element) => {
     return (
       <View
@@ -117,17 +117,40 @@ function renderDisplay() {
             alignItems: "center",
           }}
         >
-          <Image
-            style={{
-              width: width / 4,
-              height: width / 4,
-              resizeMode: "stretch",
-              borderRadius: 10,
-            }}
-            source={{
-              uri: element.img,
-            }}
-          />
+          <View>
+            <Image
+              style={{
+                width: width / 4,
+                height: width / 4,
+                resizeMode: "stretch",
+                borderRadius: 10,
+              }}
+              source={{
+                uri: element.img,
+              }}
+            />
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("DetailStadium");
+              }}
+            >
+              <Text
+                style={{
+                  fontStyle: "italic",
+                  textDecorationLine: "underline",
+                  fontSize: 18,
+                  color: "black",
+                  fontFamily: "RobotoBlack",
+                  fontWeight: "700",
+                  textAlign: "center",
+                  marginTop: 5,
+                }}
+              >
+                Xem thêm
+              </Text>
+            </TouchableOpacity>
+          </View>
+
           <View style={{ paddingLeft: 10 }}>
             <View
               style={{
@@ -271,7 +294,7 @@ function renderDisplay() {
   });
 }
 
-export default function AnotherSales() {
+export default function AnotherSales(props) {
   const [loaded] = useFonts({
     RobotoBlack: require("../../assets/fonts/Roboto-Black.ttf"),
     RobotoThin: require("../../assets/fonts/Roboto-Thin.ttf"),
@@ -293,7 +316,7 @@ export default function AnotherSales() {
         >
           Có thể bạn sẽ thích?
         </Text>
-        {renderDisplay()}
+        {renderDisplay(props.title)}
       </View>
     </View>
   );

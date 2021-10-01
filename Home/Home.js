@@ -18,7 +18,7 @@ export default function Home({ navigation }) {
         <NearHome title={navigation} />
         <HighRating title={navigation} />
         <BlankPitch title={navigation} />
-        <AnotherSales />
+        <AnotherSales title={navigation} />
       </ScrollView>
     </View>
   );
