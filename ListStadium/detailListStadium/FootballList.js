@@ -67,6 +67,7 @@ function fillData(myData, filter) {
                     fontSize: 16,
                     width: width / 2,
                     fontFamily: "RobotoBlack",
+                    marginBottom: 3,
                   }}
                 >
                   {element.name}

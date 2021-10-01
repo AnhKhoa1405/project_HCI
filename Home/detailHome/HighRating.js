@@ -138,6 +138,7 @@ export default function HighRating(props) {
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
+                    alignItems: "center",
                   }}
                 >
                   <View
@@ -157,7 +158,7 @@ export default function HighRating(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      11
+                      11 vs 11
                     </Text>
                   </View>
                   <View
@@ -240,7 +241,7 @@ export default function HighRating(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      5
+                      5.0
                     </Text>
                   </View>
                 </View>
@@ -248,6 +249,7 @@ export default function HighRating(props) {
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
+                    alignItems: "center",
                   }}
                 >
                   <View
@@ -267,7 +269,7 @@ export default function HighRating(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      5
+                      5 vs 5
                     </Text>
                   </View>
                   <View
@@ -358,6 +360,7 @@ export default function HighRating(props) {
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
+                    alignItems: "center",
                   }}
                 >
                   <View
@@ -377,7 +380,7 @@ export default function HighRating(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      5
+                      5 vs 5
                     </Text>
                   </View>
                   <View
@@ -460,7 +463,7 @@ export default function HighRating(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      4
+                      4.0
                     </Text>
                   </View>
                 </View>
@@ -468,6 +471,7 @@ export default function HighRating(props) {
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
+                    alignItems: "center",
                   }}
                 >
                   <View
@@ -487,7 +491,7 @@ export default function HighRating(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      7
+                      7 vs 7
                     </Text>
                   </View>
                   <View
@@ -570,7 +574,7 @@ export default function HighRating(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      5
+                      5.0
                     </Text>
                   </View>
                 </View>
@@ -578,6 +582,7 @@ export default function HighRating(props) {
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
+                    alignItems: "center",
                   }}
                 >
                   <View
@@ -597,7 +602,7 @@ export default function HighRating(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      5
+                      5 vs 5
                     </Text>
                   </View>
                   <View
