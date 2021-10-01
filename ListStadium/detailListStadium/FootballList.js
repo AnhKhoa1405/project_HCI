@@ -26,9 +26,7 @@ function fillData(myData, filter, navigation) {
           borderBottomColor: "#BCC0C3",
           marginTop: 10,
           justifyContent: "center",
-          width: width,
-          paddingLeft: 5,
-          paddingRight: 5,
+          width: width / 1.05,
         }}
       >
         <View
@@ -41,8 +39,8 @@ function fillData(myData, filter, navigation) {
           <View>
             <Image
               style={{
-                width: width / 3.5,
-                height: width / 3.5,
+                width: width / 4,
+                height: width / 4,
                 resizeMode: "stretch",
                 borderRadius: 10,
               }}
@@ -64,7 +62,7 @@ function fillData(myData, filter, navigation) {
                   fontFamily: "RobotoBlack",
                   fontWeight: "700",
                   textAlign: "center",
-                  marginTop: 5,
+                  marginTop: 10,
                 }}
               >
                 Xem thêm
@@ -72,7 +70,7 @@ function fillData(myData, filter, navigation) {
             </TouchableOpacity>
           </View>
 
-          <View style={{ marginLeft: 8 }}>
+          <View style={{ marginLeft: 10 }}>
             <View
               style={{ flexDirection: "row", justifyContent: "space-around" }}
             >
@@ -96,7 +94,12 @@ function fillData(myData, filter, navigation) {
                   {element.name}
                 </Text>
               </View>
-              <View style={{ flexDirection: "row", alignItems: "center" }}>
+              <View
+                style={{
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
                 <AntDesign name="star" size={24} color="#F7B603" />
                 <Text
                   style={{
@@ -233,7 +236,14 @@ export default function FootballList(props) {
     return null;
   }
   return (
-    <View>{fillData(props.myData, props.myFilter, props.navigation)}</View>
+    <View
+      style={{
+        paddingLeft: 5,
+        marginRight: 5,
+      }}
+    >
+      {fillData(props.myData, props.myFilter, props.navigation)}
+    </View>
   );
 }
 

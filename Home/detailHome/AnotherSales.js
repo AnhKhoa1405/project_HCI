@@ -143,7 +143,7 @@ function renderDisplay(navigation) {
                   fontFamily: "RobotoBlack",
                   fontWeight: "700",
                   textAlign: "center",
-                  marginTop: 5,
+                  marginTop: 10,
                 }}
               >
                 Xem thêm
