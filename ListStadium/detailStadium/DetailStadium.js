@@ -26,38 +26,38 @@ export default class DetailStadium extends React.Component {
     img: "https://bangsport.net/wp-content/uploads/2020/12/1200px-Panoramic_santiago_bernabeu.jpg",
     name: "Sân bóng Hoa Lư",
     address: "19 Hòa Hưng Quận Tân Bình Thành Phố HCM",
-    price: ["350000", "450000", "555000"],
-    type: ["5 VS 5",],
+    price:  "450000",
+    type: "5 VS 5",
     rating: "4.6",
     distance: 0.5,
   },
   {
     id: 2,
     img: "https://bangsport.net/wp-content/uploads/2020/12/1200px-Panoramic_santiago_bernabeu.jpg",
-    name: "Sân bóng rổ Hoa Lư",
+    name: "Sân bóng Hoa Lư",
     address: "19 Hòa Hưng Quận Tân Bình Thành Phố HCM",
-    price: ["350000", "450000", "555000"],
-    type: ["7 vs 7",],
+    price: "350000",
+    type: "7 vs 7",
     rating: "4.6",
     distance: 0.5,
   },
   {
     id: 3,
     img: "https://bangsport.net/wp-content/uploads/2020/12/1200px-Panoramic_santiago_bernabeu.jpg",
-    name: "Sân bóng chuyền Hoa Lư",
+    name: "Sân bóng Hoa Lư",
     address: "19 Hòa Hưng Quận Tân Bình Thành Phố HCM",
-    price: ["350000", "450000", "555000"],
-    type: ["10 VS 10"],
+    price:  "555000",
+    type: "10 VS 10",
     rating: "4.6",
     distance: 0.5,
   },
   {
     id: 4,
     img: "https://bangsport.net/wp-content/uploads/2020/12/1200px-Panoramic_santiago_bernabeu.jpg",
-    name: "Sân cầu lông Hoa Lư",
+    name: "Sân bong Hoa Lư",
     address: "19 Hòa Hưng Quận Tân Bình Thành Phố HCM",
-    price: ["350000", "450000", "555000"],
-    type: ["11 VS 11"],
+    price:  "555000",
+    type: "11 VS 11",
     rating: "4.6",
     distance: 0.5,
   },
@@ -65,7 +65,7 @@ export default class DetailStadium extends React.Component {
 
 
 listStadium = () => {
-	return data.map((element) => {
+	return this.data.map((element) => {
     return (
       <View
         key={element.id}
@@ -88,6 +88,7 @@ listStadium = () => {
             paddingRight: width / 20,
             flexDirection: "row",
             alignItems: "center",
+	 
           }}
         >
           <Image
@@ -117,9 +118,10 @@ listStadium = () => {
                 <Text
                   style={{
                     fontSize: 16,
-                    width: width / 2,
+                    width: width / 2.5,
                     fontFamily: "RobotoBlack",
                     marginBottom: 3,
+		   
                   }}
                 >
                   {element.name}
@@ -131,7 +133,7 @@ listStadium = () => {
                   style={{
                     fontSize: 16,
                     fontFamily:
-                      filter === "high" ? "RobotoBlack" : "RototoMedium",
+                      "RototoMedium",
                   }}
                 >
                   {element.rating}
@@ -201,8 +203,8 @@ listStadium = () => {
                   style={{
                     fontSize: 16,
                     color: "black",
-                    fontFamily:
-                      filter === "near" ? "RobotoBlack" : "RototoMedium",
+                    fontFamily: "RototoMedium", 
+                
                   }}
                 >
                   {element.distance} km
@@ -212,7 +214,7 @@ listStadium = () => {
 
             <TouchableOpacity
               style={{
-                width: width / 1.5,
+                width: width / 1.6,
                 marginTop: 10,
                 paddingTop: 5,
                 paddingBottom: 5,
@@ -244,7 +246,7 @@ listStadium = () => {
 }
 
 
-rate = ["sân đẹp", "mặt cỏ xịn", "thoáng mát", "cô chủ xinh", "nhiều đồ giải khát", " dịch vụ tốt"]
+rate = ["sân đẹp (500)", "mặt cỏ xịn (540)", "thoáng mát (300)", "cô chủ xinh (999+)", "nhiều đồ giải khát (100)", " dịch vụ tốt (999+)" ,"(more)"]
 
 listRatings = () => {
 	return this.rate.map((element) => {
@@ -338,12 +340,116 @@ listRatings = () => {
 		</View>
 	
 		<View style ={{flexDirection: "row",
-	marginTop:100, borderBottomColor:"#999b9b",borderBottomWidth:5, paddingBottom:20}}>
+	marginTop:100,  paddingBottom:20}}>
 		<ScrollView horizontal ={true} showsHorizontalScrollIndicator={false}>
 			{this.listRatings()}
 			</ScrollView>
 		</View>
-	
+		  
+		  <Text style ={{ fontSize: 14,
+                  color: "black",
+                  fontFamily: "RototoMedium",
+		  textAlign: "center",
+		  fontWeight:"700",
+		  marginBottom:10}}>
+			  DỊCH VỤ TẠI ĐỊA ĐIỂM
+		  </Text>
+		  <View style ={{flexDirection:"row", justifyContent:"space-around",borderBottomColor:"#999b9b",borderBottomWidth:5,
+		paddingBottom: 20}}>
+		  <View style ={{}}>
+			  <View style ={{flexDirection:"row", alignItems: "center"}}>
+			  <MaterialCommunityIcons
+                  style={{
+                    marginRight: 10,
+                  }}
+                  name="car-side"
+                  size={24}
+                //   color="#3ac5c9"
+                />
+			  <Text>Đậu xe</Text>
+		  </View>
+		  <View style ={{flexDirection:"row", alignItems: "center"}}>
+			  <MaterialCommunityIcons
+                  style={{
+                    marginRight: 10,
+                  }}
+                  name="spotlight"
+                  size={24}
+                //   color="#3ac5c9"
+                />
+			  <Text>Hệ thống đèn </Text>
+		  </View>
+		  <View style ={{flexDirection:"row", alignItems: "center"}}>
+			  <MaterialCommunityIcons
+                  style={{
+                    marginRight: 10,
+                  }}
+                  name="tshirt-crew"
+                  size={24}
+                //   color="#3ac5c9"
+                />
+			  <Text>Cho thuê áo</Text>
+		  </View>
+		  <View style ={{flexDirection:"row", alignItems: "center"}}>
+			  <MaterialCommunityIcons
+                  style={{
+                    marginRight: 10,
+                  }}
+                  name="paper-roll"
+                  size={24}
+                //   color="#3ac5c9"
+                />
+			  <Text>Nhà vệ sinh</Text>
+		  </View>
+		  </View>
+		  <View>
+			  <View style ={{flexDirection:"row", alignItems: "center"}}>
+			  <MaterialCommunityIcons
+                  style={{
+                    marginRight: 10,
+                  }}
+                  name="soccer"
+                  size={24}
+                //   color="#3ac5c9"
+                />
+			  <Text>Bóng miễn phí</Text>
+		  </View>
+		  <View style ={{flexDirection:"row", alignItems: "center"}}>
+			  <MaterialCommunityIcons
+                  style={{
+                    marginRight: 10,
+                  }}
+                  name="wifi"
+                  size={24}
+                //   color="#3ac5c9"
+                />
+			  <Text>Wifi miễn phí </Text>
+		  </View>
+		  <View style ={{flexDirection:"row", alignItems: "center"}}>
+			  <MaterialCommunityIcons
+                  style={{
+                    marginRight: 10,
+                  }}
+                  name="hamburger"
+                  size={24}
+                //   color="#3ac5c9"
+                />
+			  <Text>Căn tin</Text>
+		  </View>
+		  <View style ={{flexDirection:"row", alignItems: "center"}}>
+			  <MaterialCommunityIcons
+                  style={{
+                    marginRight: 10,
+                  }}
+                  name="shower-head"
+                  size={24}
+                //   color="#3ac5c9"
+                />
+			  <Text>Phòng tắm</Text>
+		  </View>
+		  </View>
+		  </View>
+
 		 <View
         style={{
           flexDirection: "column",
