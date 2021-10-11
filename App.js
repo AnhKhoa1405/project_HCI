@@ -14,6 +14,7 @@ import FooterHome from "./FooterPage/FooterHome";
 import Discount from "./Discount/Discount";
 import ListSuggest from "./Home/detailHome/ListSuggest";
 import DetailStadium from "./ListStadium/detailStadium/DetailStadium";
+import Rent from "./Rent/Rent"
 
 const Stack = createStackNavigator();
 
@@ -106,6 +107,15 @@ export default function App() {
           }}
           name="DetailStadium"
           component={DetailStadium}
+        />
+        <Stack.Screen
+          options={{
+            title: "Đặt lịch giữ chỗ",
+            headerBackTitle: "",
+            headerTitleAlign: "center",
+          }}
+          name="Rent"
+          component={Rent}
         />
       </Stack.Navigator>
     </NavigationContainer>

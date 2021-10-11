@@ -194,7 +194,7 @@ function fillData(myData, filter, navigation) {
                     {(parseFloat(element.price) * 0.5)}.000 vnđ / 1h 
                   </Text>
                 ) : (
-                  none
+                  <Text></Text>
                 )}
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -224,6 +224,9 @@ function fillData(myData, filter, navigation) {
                 // borderColor: "red",
                 borderWidth: 2,
                 borderColor: "#3ac5c9",
+              }}
+              onPress={() =>{
+                navigation.navigate("Rent")
               }}
             >
               <Text
