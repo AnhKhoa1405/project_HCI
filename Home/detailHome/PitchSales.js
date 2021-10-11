@@ -19,7 +19,7 @@ import { useFonts } from "expo-font";
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
 
-export default function HighRating(props) {
+export default function PitchSales(props) {
   const navigation = props.title;
   const titleName = props.titleName;
   const [loaded] = useFonts({
@@ -52,13 +52,13 @@ export default function HighRating(props) {
               textAlign: "right",
             }}
           >
-            Sân được đánh giá cao
+            Sân khuyến mãi
           </Text>
           <TouchableOpacity
             onPress={() => {
               navigation.navigate("HomeStadium", {
                 name: titleName != undefined ? titleName : "Bóng đá",
-                filter: "high",
+                filter: "sale",
               });
             }}
           >
@@ -91,13 +91,23 @@ export default function HighRating(props) {
             >
               <Image
                 source={{
-                  uri: "https://nld.mediacdn.vn/2020/4/20/1-15873512964081682775236.jpg",
+                  uri: "https://thegioithethao.vn/upload_images/images/2021/01/08/san-bong-11-nguoi-min.png",
                 }}
                 style={{
                   width: width / 3,
                   height: width / 5,
                 }}
               />
+              <Image
+                source={require("../../assets/khoaimg/discount1.png")}
+                style={{
+                  width: width / 15,
+                  height: width / 15,
+                  position: "absolute",
+                  right: 20,
+                }}
+              />
+
               <View
                 style={{
                   marginTop: 4,
@@ -115,7 +125,7 @@ export default function HighRating(props) {
                       fontFamily: "RototoMedium",
                     }}
                   >
-                    Sân Lũ Lụt
+                    Sân Cầu May
                   </Text>
                   <View
                     style={{
@@ -127,10 +137,9 @@ export default function HighRating(props) {
                       style={{
                         fontFamily: "RototoMedium",
                         paddingLeft: 3,
-                        fontFamily: "RobotoBlack",
                       }}
                     >
-                      3.0
+                      4.6
                     </Text>
                   </View>
                 </View>
@@ -158,7 +167,7 @@ export default function HighRating(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      Sân 11
+                      Sân 5
                     </Text>
                   </View>
                   <View
@@ -170,7 +179,13 @@ export default function HighRating(props) {
                     }}
                   >
                     <Entypo name="location-pin" size={16} color="#3ac5c9" />
-                    <Text>7 km</Text>
+                    <Text
+                      style={{
+                        fontFamily: "RobotoBlack",
+                      }}
+                    >
+                      3.5 km
+                    </Text>
                   </View>
                 </View>
                 <View
@@ -183,10 +198,23 @@ export default function HighRating(props) {
                   <Text
                     style={{
                       fontFamily: "RototoMedium",
-                      paddingLeft: 3,
+                    
+                      textDecorationLine: "line-through",
+                      textDecorationStyle: "solid",
+                      fontSize: 12,
                     }}
                   >
-                    720.000 vnđ / 1h
+                    350.000
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: "RototoMedium",
+                    
+                      fontWeight: "700",
+                      color: "red",
+                    }}
+                  >
+                    220.000 vnđ
                   </Text>
                 </View>
               </View>
@@ -203,11 +231,20 @@ export default function HighRating(props) {
             >
               <Image
                 source={{
-                  uri: "https://tikibook.com/upload/news/042021/san-van-dong-optus-0.jpg",
+                  uri: "https://leep.imgix.net/2021/05/iQKrKs6y-san-bong-chay.jpg?auto=compress&fm=pjpg&ixlib=php-1.2.1",
                 }}
                 style={{
                   width: width / 3,
                   height: width / 5,
+                }}
+              />
+              <Image
+                source={require("../../assets/khoaimg/discount1.png")}
+                style={{
+                  width: width / 15,
+                  height: width / 15,
+                  position: "absolute",
+                  right: 20,
                 }}
               />
               <View
@@ -227,7 +264,7 @@ export default function HighRating(props) {
                       fontFamily: "RototoMedium",
                     }}
                   >
-                    Sân Hàm Rồng
+                    Sân Cầu Vồng
                   </Text>
                   <View
                     style={{
@@ -237,11 +274,11 @@ export default function HighRating(props) {
                     <AntDesign name="star" size={14} color="#F7B603" />
                     <Text
                       style={{
-                        fontFamily: "RobotoBlack",
+                        fontFamily: "RototoMedium",
                         paddingLeft: 3,
                       }}
                     >
-                      5.0
+                      3.2
                     </Text>
                   </View>
                 </View>
@@ -269,7 +306,7 @@ export default function HighRating(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      Sân 5{" "}
+                      Sân 7
                     </Text>
                   </View>
                   <View
@@ -281,7 +318,13 @@ export default function HighRating(props) {
                     }}
                   >
                     <Entypo name="location-pin" size={16} color="#3ac5c9" />
-                    <Text>3.5 km</Text>
+                    <Text
+                      style={{
+                        fontFamily: "RobotoBlack",
+                      }}
+                    >
+                      2 km
+                    </Text>
                   </View>
                 </View>
                 <View
@@ -294,10 +337,23 @@ export default function HighRating(props) {
                   <Text
                     style={{
                       fontFamily: "RototoMedium",
-                      paddingLeft: 3,
+                    
+                      textDecorationLine: "line-through",
+                      textDecorationStyle: "solid",
+                      fontSize: 12,
                     }}
                   >
-                    120.000 vnđ / 1h
+                    290.000
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: "RototoMedium",
+                    
+                      fontWeight: "700",
+                      color: "red",
+                    }}
+                  >
+                    130.000 vnđ
                   </Text>
                 </View>
               </View>
@@ -314,11 +370,20 @@ export default function HighRating(props) {
             >
               <Image
                 source={{
-                  uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxAZ0SHDJlkPS5lEWE6GgjAOw7qSUoipf8G98ZjnAbAV5vGUYjDgjMXE8NCstEb2Bet9A&usqp=CAU",
+                  uri: "https://iconfacebook.net/wp-content/uploads/2021/02/bong-chay-la-gi-tong-hop-danh-sach-san-bong-chay-chat-luong-nhat-1613373634.jpeg",
                 }}
                 style={{
                   width: width / 3,
                   height: width / 5,
+                }}
+              />
+              <Image
+                source={require("../../assets/khoaimg/discount1.png")}
+                style={{
+                  width: width / 15,
+                  height: width / 15,
+                  position: "absolute",
+                  right: 20,
                 }}
               />
               <View
@@ -338,7 +403,7 @@ export default function HighRating(props) {
                       fontFamily: "RototoMedium",
                     }}
                   >
-                    Sân Công Viên
+                    Sân Rồng
                   </Text>
                   <View
                     style={{
@@ -346,120 +411,9 @@ export default function HighRating(props) {
                     }}
                   >
                     <AntDesign name="star" size={14} color="#F7B603" />
-                    <Text
-                      style={{
-                        fontFamily: "RobotoBlack",
-                        paddingLeft: 3,
-                      }}
-                    >
-                      2.2
-                    </Text>
-                  </View>
-                </View>
-                <View
-                  style={{
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
-                  <View
-                    style={{
-                      flexDirection: "row",
-                      alignItems: "baseline",
-                    }}
-                  >
-                    <MaterialCommunityIcons
-                      name="soccer-field"
-                      color="#3ac5c9"
-                      size={18}
-                    />
                     <Text
                       style={{
                         fontFamily: "RototoMedium",
-                        paddingLeft: 3,
-                      }}
-                    >
-                      Sân 5{" "}
-                    </Text>
-                  </View>
-                  <View
-                    style={{
-                      flexDirection: "row",
-                      alignItems: "baseline",
-                      marginTop: 2,
-                      marginBottom: 2,
-                    }}
-                  >
-                    <Entypo name="location-pin" size={16} color="#3ac5c9" />
-                    <Text>5 km</Text>
-                  </View>
-                </View>
-                <View
-                  style={{
-                    flexDirection: "row",
-                    alignItems: "baseline",
-                  }}
-                >
-                  <FontAwesome5 name="money-bill" color="#3ac5c9" size={14} />
-                  <Text
-                    style={{
-                      fontFamily: "RototoMedium",
-                      paddingLeft: 3,
-                    }}
-                  >
-                    450.000 vnđ / 1h
-                  </Text>
-                </View>
-              </View>
-            </View>
-            <View
-              style={{
-                // borderWidth: 2,
-                paddingRight: 16,
-                // borderTopColor: "transparent",
-                // borderBottomColor: "transparent",
-                // borderLeftColor: "transparent",
-                // borderRightColor: "#3ac5c9",
-              }}
-            >
-              <Image
-                source={{
-                  uri: "https://cdn1.tuoitre.vn/zoom/600_315/2020/6/17/photo-1-1592380746735413858541-crop-15923808269651850829597.jpg",
-                }}
-                style={{
-                  width: width / 3,
-                  height: width / 5,
-                }}
-              />
-              <View
-                style={{
-                  marginTop: 4,
-                  width: width / 3,
-                }}
-              >
-                <View
-                  style={{
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <Text
-                    style={{
-                      fontFamily: "RototoMedium",
-                    }}
-                  >
-                    Sân Mỹ Đình
-                  </Text>
-                  <View
-                    style={{
-                      flexDirection: "row",
-                    }}
-                  >
-                    <AntDesign name="star" size={14} color="#F7B603" />
-                    <Text
-                      style={{
-                        fontFamily: "RobotoBlack",
                         paddingLeft: 3,
                       }}
                     >
@@ -491,7 +445,7 @@ export default function HighRating(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      Sân 7{" "}
+                      1Sân 11
                     </Text>
                   </View>
                   <View
@@ -503,7 +457,13 @@ export default function HighRating(props) {
                     }}
                   >
                     <Entypo name="location-pin" size={16} color="#3ac5c9" />
-                    <Text>10 km</Text>
+                    <Text
+                      style={{
+                        fontFamily: "RobotoBlack",
+                      }}
+                    >
+                      1.9 km
+                    </Text>
                   </View>
                 </View>
                 <View
@@ -516,10 +476,23 @@ export default function HighRating(props) {
                   <Text
                     style={{
                       fontFamily: "RototoMedium",
-                      paddingLeft: 3,
+                    
+                      textDecorationLine: "line-through",
+                      textDecorationStyle: "solid",
+                      fontSize: 12,
                     }}
                   >
-                    500.000 vnđ / 1h
+                    700.000
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: "RototoMedium",
+                    
+                      fontWeight: "700",
+                      color: "red",
+                    }}
+                  >
+                    550.000 vnđ
                   </Text>
                 </View>
               </View>
@@ -536,11 +509,20 @@ export default function HighRating(props) {
             >
               <Image
                 source={{
-                  uri: "https://kenh14cdn.com/Images/Uploaded/Share/2010/12/11/1212Umm-Slal.jpg",
+                  uri: "https://blog.yousport.vn/wp-content/uploads/2018/09/k%C3%ADch-th%C6%B0%E1%BB%9Bc-s%C3%A2n-5.jpg",
                 }}
                 style={{
                   width: width / 3,
                   height: width / 5,
+                }}
+              />
+              <Image
+                source={require("../../assets/khoaimg/discount1.png")}
+                style={{
+                  width: width / 15,
+                  height: width / 15,
+                  position: "absolute",
+                  right: 20,
                 }}
               />
               <View
@@ -560,7 +542,7 @@ export default function HighRating(props) {
                       fontFamily: "RototoMedium",
                     }}
                   >
-                    Sân Cát
+                    Sân Thượng
                   </Text>
                   <View
                     style={{
@@ -570,11 +552,11 @@ export default function HighRating(props) {
                     <AntDesign name="star" size={14} color="#F7B603" />
                     <Text
                       style={{
-                        fontFamily: "RobotoBlack",
+                        fontFamily: "RototoMedium",
                         paddingLeft: 3,
                       }}
                     >
-                      5.0
+                      1.2
                     </Text>
                   </View>
                 </View>
@@ -588,7 +570,7 @@ export default function HighRating(props) {
                   <View
                     style={{
                       flexDirection: "row",
-                      alignItems: "baseline",
+                      alignItems: "center",
                     }}
                   >
                     <MaterialCommunityIcons
@@ -602,7 +584,7 @@ export default function HighRating(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      Sân 5{" "}
+                      Sân 7
                     </Text>
                   </View>
                   <View
@@ -614,7 +596,13 @@ export default function HighRating(props) {
                     }}
                   >
                     <Entypo name="location-pin" size={16} color="#3ac5c9" />
-                    <Text>6.2 km</Text>
+                    <Text
+                      style={{
+                        fontFamily: "RobotoBlack",
+                      }}
+                    >
+                      2.6 km
+                    </Text>
                   </View>
                 </View>
                 <View
@@ -627,10 +615,162 @@ export default function HighRating(props) {
                   <Text
                     style={{
                       fontFamily: "RototoMedium",
-                      paddingLeft: 3,
+                    
+                      textDecorationLine: "line-through",
+                      textDecorationStyle: "solid",
+                      fontSize: 12,
                     }}
                   >
-                    600.000 vnđ / 1h
+                    470.000
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: "RototoMedium",
+                    
+                      fontWeight: "700",
+                      color: "red",
+                    }}
+                  >
+                    100.000 vnđ
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              style={{
+                // borderWidth: 2,
+                paddingRight: 16,
+                // borderTopColor: "transparent",
+                // borderBottomColor: "transparent",
+                // borderLeftColor: "transparent",
+                // borderRightColor: "#3ac5c9",
+              }}
+            >
+              <Image
+                source={{
+                  uri: "https://cdn.bongdaplus.vn/Assets/Media/2020/04/17/66/tq0.jpg",
+                }}
+                style={{
+                  width: width / 3,
+                  height: width / 5,
+                }}
+              />
+              <Image
+                source={require("../../assets/khoaimg/discount1.png")}
+                style={{
+                  width: width / 15,
+                  height: width / 15,
+                  position: "absolute",
+                  right: 20,
+                }}
+              />
+              <View
+                style={{
+                  marginTop: 4,
+                  width: width / 3,
+                }}
+              >
+                <View
+                  style={{
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Text
+                    style={{
+                      fontFamily: "RototoMedium",
+                    }}
+                  >
+                    Sân Bay
+                  </Text>
+                  <View
+                    style={{
+                      flexDirection: "row",
+                    }}
+                  >
+                    <AntDesign name="star" size={14} color="#F7B603" />
+                    <Text
+                      style={{
+                        fontFamily: "RototoMedium",
+                        paddingLeft: 3,
+                      }}
+                    >
+                      5.0
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <View
+                    style={{
+                      flexDirection: "row",
+                      alignItems: "baseline",
+                      alignItems: "center",
+                    }}
+                  >
+                    <MaterialCommunityIcons
+                      name="soccer-field"
+                      color="#3ac5c9"
+                      size={18}
+                    />
+                    <Text
+                      style={{
+                        fontFamily: "RototoMedium",
+                        paddingLeft: 3,
+                      }}
+                    >
+                      Sân 5
+                    </Text>
+                  </View>
+                  <View
+                    style={{
+                      flexDirection: "row",
+                      alignItems: "baseline",
+                      marginTop: 2,
+                      marginBottom: 2,
+                    }}
+                  >
+                    <Entypo name="location-pin" size={16} color="#3ac5c9" />
+                    <Text
+                      style={{
+                        fontFamily: "RobotoBlack",
+                      }}
+                    >
+                      0.5 km
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    alignItems: "baseline",
+                  }}
+                >
+                  <FontAwesome5 name="money-bill" color="#3ac5c9" size={14} />
+                  <Text
+                    style={{
+                      fontFamily: "RototoMedium",
+                    
+                      textDecorationLine: "line-through",
+                      textDecorationStyle: "solid",
+                      fontSize: 12,
+                    }}
+                  >
+                    1.000.000
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: "RototoMedium",
+                    
+                      fontWeight: "700",
+                      color: "red",
+                    }}
+                  >
+                    900.000 vnđ
                   </Text>
                 </View>
               </View>

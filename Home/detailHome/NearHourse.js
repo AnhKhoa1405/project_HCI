@@ -157,7 +157,7 @@ export default function NearHouse(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      5 vs 5
+                      Sân 5
                     </Text>
                   </View>
                   <View
@@ -274,7 +274,7 @@ export default function NearHouse(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      7 vs 7
+                      Sân 7
                     </Text>
                   </View>
                   <View
@@ -391,7 +391,7 @@ export default function NearHouse(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      11 vs 11
+                      1Sân 1 1
                     </Text>
                   </View>
                   <View
@@ -508,7 +508,7 @@ export default function NearHouse(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      7 vs 7
+                      Sân 7
                     </Text>
                   </View>
                   <View
@@ -625,7 +625,7 @@ export default function NearHouse(props) {
                         paddingLeft: 3,
                       }}
                     >
-                      5 vs 5
+                      Sân 5
                     </Text>
                   </View>
                   <View

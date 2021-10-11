@@ -8,6 +8,7 @@ import {
 } from "@expo/vector-icons";
 import { Dimensions } from "react-native";
 import { useFonts } from "expo-font";
+import { round } from "react-native-reanimated";
 
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full height
@@ -173,10 +174,28 @@ function fillData(myData, filter, navigation) {
                     marginBottom: 2,
                     color: "black",
                     fontFamily: "RototoMedium",
+                    textDecorationLine:
+                      filter === "sale" ? "line-through" : "none",
+                    textDecorationStyle: filter === "sale" ? "solid" : "none",
                   }}
                 >
-                  {element.price} vnđ / 1h
+                  {element.price} {filter === "sale" ? "" : "vnđ / 1h"}
                 </Text>
+                {filter === "sale" ? (
+                  <Text
+                    style={{
+                      fontSize: 16,
+                      marginBottom: 2,
+                      color: "black",
+                      fontFamily: "RototoMedium",
+                      color: "red",
+                    }}
+                  >
+                    {(parseFloat(element.price) * 0.5)}.000 vnđ / 1h 
+                  </Text>
+                ) : (
+                  none
+                )}
               </View>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <Entypo name="location-pin" size={24} color="#3ac5c9" />
