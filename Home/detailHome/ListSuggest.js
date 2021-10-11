@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, ScrollView } from "react-native";
 import BlankPitch from "./BlankPitch";
 import HighRating from "./HighRating";
 import NearHome from "./NearHourse";
+import PitchSales from "./PitchSales";
 
 export default function ListSuggest({ navigation, route }) {
   return (
@@ -30,6 +31,7 @@ export default function ListSuggest({ navigation, route }) {
         <NearHome title={navigation} titleName={route.params.name} />
         <HighRating title={navigation} titleName={route.params.name} />
         <BlankPitch title={navigation} titleName={route.params.name} />
+        <PitchSales title={navigation} titleName={route.params.name} />
       </ScrollView>
     </View>
   );

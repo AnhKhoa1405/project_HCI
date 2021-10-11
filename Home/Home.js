@@ -7,6 +7,7 @@ import HighRating from "./detailHome/HighRating";
 import MyCarousel from "./detailHome/MyCarousel";
 import MyCategory from "./detailHome/MyCategory";
 import NearHome from "./detailHome/NearHourse";
+import PitchSales from "./detailHome/PitchSales";
 
 export default function Home({ navigation }) {
   return (
@@ -18,6 +19,7 @@ export default function Home({ navigation }) {
         <NearHome title={navigation} />
         <HighRating title={navigation} />
         <BlankPitch title={navigation} />
+        <PitchSales title={navigation} />
         <AnotherSales title={navigation} />
       </ScrollView>
     </View>
