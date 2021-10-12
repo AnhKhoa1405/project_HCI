@@ -754,7 +754,6 @@ export default function PitchSales(props) {
                   <Text
                     style={{
                       fontFamily: "RototoMedium",
-                    
                       textDecorationLine: "line-through",
                       textDecorationStyle: "solid",
                       fontSize: 12,
