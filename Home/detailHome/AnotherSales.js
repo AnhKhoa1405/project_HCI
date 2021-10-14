@@ -273,7 +273,11 @@ function renderDisplay(navigation) {
                 // borderColor: "red",
                 borderWidth: 2,
                 borderColor: "#3ac5c9",
+                
               }}
+               onPress={() => {
+                  navigation.navigate("Rent");
+                }}
             >
               <Text
                 style={{
@@ -283,6 +287,7 @@ function renderDisplay(navigation) {
                   color: "#3ac5c9",
                   fontWeight: "700",
                 }}
+               
               >
                 Đặt sân ngay
               </Text>

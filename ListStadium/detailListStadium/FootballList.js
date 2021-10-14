@@ -225,6 +225,9 @@ function fillData(myData, filter, navigation) {
                 borderWidth: 2,
                 borderColor: "#3ac5c9",
               }}
+              onPress={() =>{
+                navigation.navigate("Rent")
+              }}
             >
               <Text
                 style={{
