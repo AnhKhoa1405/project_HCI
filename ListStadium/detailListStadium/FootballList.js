@@ -106,7 +106,7 @@ function fillData(myData, filter, navigation) {
                   style={{
                     fontSize: 16,
                     fontFamily:
-                      filter === "high" ? "RobotoBlack" : "RototoMedium",
+                      filter == "high" ? "RobotoBlack" : "RototoMedium",
                   }}
                 >
                   {element.rating}
@@ -176,12 +176,12 @@ function fillData(myData, filter, navigation) {
                     fontFamily: "RototoMedium",
                     textDecorationLine:
                       filter === "sale" ? "line-through" : "none",
-                    textDecorationStyle: filter === "sale" ? "solid" : "none",
+                    textDecorationStyle: filter == "sale" ? "solid" : "none",
                   }}
                 >
-                  {element.price} {filter === "sale" ? "" : "vnđ / 1h"}
+                  {element.price} {filter == "sale" ? "" : "vnđ / 1h"}
                 </Text>
-                {filter === "sale" ? (
+                {filter == "sale" ? (
                   <Text
                     style={{
                       fontSize: 16,
@@ -191,7 +191,7 @@ function fillData(myData, filter, navigation) {
                       color: "red",
                     }}
                   >
-                    {(parseFloat(element.price) * 0.5)}.000 vnđ / 1h 
+                    {parseFloat(element.price) * 0.5}.000 vnđ / 1h
                   </Text>
                 ) : (
                   <Text></Text>
@@ -204,7 +204,7 @@ function fillData(myData, filter, navigation) {
                     fontSize: 16,
                     color: "black",
                     fontFamily:
-                      filter === "near" ? "RobotoBlack" : "RototoMedium",
+                      filter == "near" ? "RobotoBlack" : "RototoMedium",
                   }}
                 >
                   {element.distance} km
